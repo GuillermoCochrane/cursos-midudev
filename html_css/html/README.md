@@ -44,7 +44,7 @@ de [Midudev](https://www.youtube.com/watch?v=3nYLTiY5skU). Un único `index.html
 - [x] **05**: documento completo con head/body, charset, viewport, favicon
 - [x] **06**: metaetiquetas SEO y primeros estilos inline
 - [x] **07**: estructura semántica sin divs innecesarios
-- [ ] **08**: navegación y enlaces correctos, accesibilidad básica
+- [x] **08**: navegación y enlaces correctos, accesibilidad básica
 - [ ] **09**: enlaces especiales y atributos de listas
 - [ ] **10**: formulario funcional con fieldset, label e input
 - [ ] **11**: formulario validado con controles extra nativos

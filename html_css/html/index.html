@@ -34,76 +34,111 @@
 </head>
 <body>
   <!-- Headings, párrafos, strong y listas -->
-  <h1>Portfolio de Midudev</h1>
-  <p>+ 15 años de experiencia como <strong>Ingeniero de Software</strong>. Creador y divulgador de progamación.</p>
+  <header>
+    <h1>Portfolio de Midudev</h1>
+    <nav>
+      <!-- enlaces internos -->
+      <a href="#experiencia">Experiencia</a>
+      <a href="#proyectos">Proyectos</a>
+      <!-- enlaces externos -->
+      <a 
+        href="https://twitch.tv/midudev" 
+        target="_blank"
+        rel="noreferrer"
+      >
+        Twitch
+      </a>
+      <a 
+        href="https://github.com/midudev" 
+        target="_blank"
+        rel="noreferrer"
+      >
+        GitHub
+      </a>
+    </nav>
+  </header>
 
-  <h2>Experiencia</h2>
-  <ul>
-    <li>Adevinta - 2022</li>
-    <li>Hubii - 2020</li>
-    <li>Nacencia - 2015</li>
-  </ul> 
+  <!-- main, enlaces, div/span y role -->
+  <main>
 
-  <!-- Elementos de reemplazo y buenas prácticas -->
-  <img 
-    width=200 
-    height=200
-    src="assets/images/yo.jpg" 
-    alt="Imagen de perfil de Midudev" 
-    title="Imagen de perfil de Midudev" 
-  >
+    <p>+ 15 años de experiencia como <strong>Ingeniero de Software</strong>. Creador y divulgador de progamación.</p>
 
-  <!--  Elementos Semánticos -->
-  <h2>Proyectos Realizados</h2>
-
-  <aside>
-    <header>
-      <h3>Mis Tecnologías Favoritas</h3>
-    </header>
+    <h2 id="experiencia">Experiencia</h2>
     <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-      <li>Node.js</li>
-    </ul>
-  </aside>
+      <li>Adevinta - 2022</li>
+      <li>Hubii - 2020</li>
+      <li>Nacencia - 2015</li>
+    </ul> 
 
-  <section> <!-- puede haber secciones dentro de una seccion, pero no abusar -->
-    <article>
-      <header>
-        <h4>Sitio Web Corporativo</h4>
-      </header>
-      <p>
-        Desarrollo de un sitio web corporativo con una interfaz de amigable y moderna.
-      </p>
-      <footer>
-        <small>Tecnologías Utilizadas: HTML, CSS, JavaScript</small>
-      </footer>
-    </article>
+    <!-- Elementos de reemplazo y buenas prácticas -->
+    <a download href="assets/images/yo.jpg"> <!-- solo funciona con recursos propios -->
+      <img 
+        width=200 
+        height=200
+        src="assets/images/yo.jpg" 
+        alt="Imagen de perfil de Midudev" 
+        title="Imagen de perfil de Midudev" 
+      >
+    </a>
 
-    <article>
-      <header>
-        <h4>Aplicacion Web de E-Commerce</h4>
-      </header>
-      <p>
-        Creación de una plataforma de comercio electrónico para un comercio local
-      </p>
-      <footer>
-        <small>Tecnologías Utilizadas: React, Node.js, MongoDB</small>
-      </footer>
-    </article>
+    <!--  Elementos Semánticos -->
+    <h2 id="proyectos">Proyectos Realizados</h2>
 
-    <article>
+    <aside role="complementary"> 
+      <!-- revisar mas role en https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Roles  -->
       <header>
-        <h4>Aplicacion Movil de Rastreo de Fitness</h4>
+        <h3>Mis Tecnologías Favoritas</h3>
       </header>
-      <p>
-        Creación de una aplicación móvil para rastrear el progreso de un usuario en un entrenamiento de fitness.
-      </p>
-      <footer>
-        <small>Tecnologías Utilizadas: React Native, Node.js, MongoDB</small>
-      </header>
-    </article>
-  </section>
+      <ol type="1" reversed start="10">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li value="5">JavaScript</li>
+        <li>Node.js</li>
+      </ol>
+    </aside>
+
+    <section> <!-- puede haber secciones dentro de una seccion, pero no abusar -->
+      <article>
+        <header>
+          <h4>Sitio Web Corporativo</h4>
+        </header>
+        <p>
+          Desarrollo de un sitio web corporativo con una interfaz de amigable y moderna.
+        </p>
+        <footer>
+          <small>Tecnologías Utilizadas: HTML, CSS, JavaScript</small>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <h4>Aplicacion Web de E-Commerce</h4>
+        </header>
+        <p>
+          Creación de una plataforma de comercio electrónico para un comercio local
+        </p>
+        <footer>
+          <small>Tecnologías Utilizadas: React, Node.js, MongoDB</small>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <h4>Aplicacion Movil de Rastreo de Fitness</h4>
+        </header>
+        <p>
+          Creación de una aplicación móvil para rastrear el progreso de un usuario en un entrenamiento de fitness.
+        </p>
+        <footer>
+          <small>Tecnologías Utilizadas: React Native, Node.js, MongoDB</small>
+        </footer>
+      </article>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright © 2026 - El portafolio más bello del mundo</p>
+    <a href="mailto:midudev@gmail.com">Enivame un correo</a>
+    <a href="tel:+5622989200">Llameme por teléfono</a>
+  </footer>
 </body>
 </html>
