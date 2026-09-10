@@ -39,8 +39,8 @@ de [Midudev](https://www.youtube.com/watch?v=3nYLTiY5skU). Un único `index.html
 
 - [x] **01**: `index.html` abre en el navegador con estructura mínima
 - [x] **02**: contenido estructurado con jerarquía
-- [ ] **03**: imágenes e inputs correctos, sin malas prácticas
-- [ ] **04**: uso correcto de atributos e identificadores
+- [x] **03**: imágenes e inputs correctos, sin malas prácticas
+- [x] **04**: uso correcto de atributos e identificadores
 - [ ] **05**: documento completo con head/body, charset, viewport, favicon
 - [ ] **06**: metaetiquetas SEO y primeros estilos inline
 - [ ] **07**: estructura semántica sin divs innecesarios
