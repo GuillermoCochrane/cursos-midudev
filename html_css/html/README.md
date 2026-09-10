@@ -37,8 +37,8 @@ de [Midudev](https://www.youtube.com/watch?v=3nYLTiY5skU). Un único `index.html
 
 ## Roadmap de commits
 
-- [ ] **01**: `index.html` abre en el navegador con estructura mínima
-- [ ] **02**: contenido estructurado con jerarquía
+- [x] **01**: `index.html` abre en el navegador con estructura mínima
+- [x] **02**: contenido estructurado con jerarquía
 - [ ] **03**: imágenes e inputs correctos, sin malas prácticas
 - [ ] **04**: uso correcto de atributos e identificadores
 - [ ] **05**: documento completo con head/body, charset, viewport, favicon
