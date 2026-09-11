@@ -27,7 +27,6 @@
     /* Estilos inline */
     body {
       background-color: #09f;
-      color: #fff;
     }
   </style>
   <!-- buscar spbre enable full page acessibility tree -->
@@ -133,6 +132,46 @@
           <small>Tecnologías Utilizadas: React Native, Node.js, MongoDB</small>
         </footer>
       </article>
+    </section>
+
+    <!-- formulario funcional con fieldset, label e input -->
+    <section>
+      <form method="post" action="/">
+        <fieldset>
+          <legend>Formulario de Contacto</legend>
+          <div>
+            <label>
+              Nombre
+              <input 
+                type="text" 
+                name="nombre" 
+                placeholder="Miguel Ángel Durán"
+              >
+            </label>
+          </div> 
+          <label>
+            Email
+            <input 
+            type="email" 
+            name="email" 
+            placeholder="midudev@gmail.com"
+          >
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Información adicional</legend>
+          <label>
+            Teléfono
+            <input 
+              type="tel" 
+              name="telefono" 
+              placeholder="562 298 9200"
+            >
+          </label>
+        </fieldset>
+        <button type="submit">Enviar</button>
+      </form>
     </section>
   </main>
   <footer>

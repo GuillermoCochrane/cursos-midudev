@@ -18,12 +18,11 @@ de [Midudev](https://www.youtube.com/watch?v=3nYLTiY5skU). Un único `index.html
   → probar en el navegador → commit.
 - **El video es un roadmap de commits**, no una lista de capítulos para
   tildar. No commiteo por haber mirado. Commiteo por haber construido.
-- **Cada commit deja el proyecto abrible y funcional.** Si un commit rompe
+- **Cada commit deja el proyecto ejecutable y funcional.** Si un commit rompe
   algo, ese sprint fue demasiado grande o mal cerrado.
 
 ## Rigor técnico (del plan híbrido)
 
-- **Timestamps verificados** contra el índice real del video.
 - **Checkpoints verificables:** cada commit tiene un entregable concreto
   que se puede comprobar en el navegador.
 - **Convención de commits:** `tipo(scope): mensaje`
@@ -45,8 +44,8 @@ de [Midudev](https://www.youtube.com/watch?v=3nYLTiY5skU). Un único `index.html
 - [x] **06**: metaetiquetas SEO y primeros estilos inline
 - [x] **07**: estructura semántica sin divs innecesarios
 - [x] **08**: navegación y enlaces correctos, accesibilidad básica
-- [ ] **09**: enlaces especiales y atributos de listas
-- [ ] **10**: formulario funcional con fieldset, label e input
+- [x] **09**: enlaces especiales y atributos de listas
+- [x] **10**: formulario funcional con fieldset, label e input
 - [ ] **11**: formulario validado con controles extra nativos
 - [ ] **12**: controles interactivos y multimedia integrados
 - [ ] **13**: recursos optimizados y iframe embebido
