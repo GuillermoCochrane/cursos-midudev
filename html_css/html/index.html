@@ -35,6 +35,15 @@
   <!-- Headings, párrafos, strong y listas -->
   <header>
     <h1>Portfolio de Midudev</h1>
+    <!-- iframes -->
+    <!-- se puede evitar que tu web se cargue en un iframe, con una etiqueta en el head -->
+    <!-- <iframe
+      src="https://www.youtube.com/embed/3nYLTiY5skU"
+      style="width: 95%; aspect-ratio: 16/9; margin: auto; display: block;"
+      title="Curso de HTML - Midudev"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe> -->
     <nav>
       <!-- enlaces internos -->
       <a href="#experiencia">Experiencia</a>
@@ -114,10 +123,17 @@
     <section> <!-- puede haber secciones dentro de una seccion, pero no abusar -->
       <article>
         <header>
-          <h4>Sitio Web Corporativo</h4>
+          <h4>La página de Tesla</h4>
+          <!-- lazy loading -->
+          <img 
+            src="assets/images/tesla.png" 
+            alt="Captura de pantalla de la página web de Tesla"
+            loading="lazy"
+            style="width: 95%; aspect-ratio: 958/433; margin: auto; display: block;"
+          >
         </header>
         <p>
-          Desarrollo de un sitio web corporativo con una interfaz de amigable y moderna.
+          Elon Musk me llamó e hice en una tarde esta página desde cero.
         </p>
         <footer>
           <small>Tecnologías Utilizadas: HTML, CSS, JavaScript</small>

@@ -48,7 +48,7 @@ de [Midudev](https://www.youtube.com/watch?v=3nYLTiY5skU). Un único `index.html
 - [x] **10**: formulario funcional con fieldset, label e input
 - [x] **11**: formulario validado con controles extra nativos
 - [x] **12**: controles interactivos y multimedia integrados
-- [ ] **13**: recursos optimizados y iframe embebido
+- [x] **13**: recursos optimizados y iframe embebido
 - [ ] **14**: modal funcional con `<dialog>`
 - [ ] **15**: README completo y apuntes finales
 
