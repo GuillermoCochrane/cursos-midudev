@@ -36,21 +36,20 @@ de [Midudev](https://www.youtube.com/watch?v=3nYLTiY5skU). Un único `index.html
 
 ## Roadmap de commits
 
-- [x] **01**: `index.html` abre en el navegador con estructura mínima
-- [x] **02**: contenido estructurado con jerarquía
-- [x] **03**: imágenes e inputs correctos, sin malas prácticas
-- [x] **04**: uso correcto de atributos e identificadores
-- [x] **05**: documento completo con head/body, charset, viewport, favicon
-- [x] **06**: metaetiquetas SEO y primeros estilos inline
-- [x] **07**: estructura semántica sin divs innecesarios
-- [x] **08**: navegación y enlaces correctos, accesibilidad básica
-- [x] **09**: enlaces especiales y atributos de listas
-- [x] **10**: formulario funcional con fieldset, label e input
-- [x] **11**: formulario validado con controles extra nativos
-- [x] **12**: controles interactivos y multimedia integrados
-- [x] **13**: recursos optimizados y iframe embebido
-- [ ] **14**: modal funcional con `<dialog>`
-- [ ] **15**: README completo y apuntes finales
+- [x] **01** `00:00–12:52`     · abre en el navegador con estructura mínima
+- [x] **02** `12:52–15:48`     · contenido estructurado con jerarquía
+- [x] **03** `15:48–22:51`     · imágenes e inputs correctos, sin malas prácticas
+- [x] **04** `22:51–32:27`     · uso correcto de atributos e identificadores
+- [x] **05** `32:27–44:00`     · documento completo con head/body, charset, viewport, favicon
+- [x] **06** `44:00–51:01`     · metaetiquetas SEO y primeros estilos inline
+- [x] **07** `51:01–1:03:17`   · estructura semántica sin divs innecesarios
+- [x] **08** `1:03:17–1:12:04` · navegación y enlaces correctos, accesibilidad básica
+- [x] **09** `1:12:04–1:16:08` · enlaces especiales y atributos de listas
+- [x] **10** `1:16:08–1:23:51` · formulario funcional con fieldset, label e input
+- [x] **11** `1:23:51–1:31:04` · formulario validado con controles extra nativos
+- [x] **12** `1:31:04–1:36:29` · controles interactivos y multimedia integrados
+- [x] **13** `1:36:29–1:45:40` · recursos optimizados y iframe embebido
+- [x] **14** `1:45:40–1:53:32` · modal funcional con `<dialog>`
 
 ---
 
@@ -69,11 +68,10 @@ de [Midudev](https://www.youtube.com/watch?v=3nYLTiY5skU). Un único `index.html
 
 ## Conceptos que quiero dominar al final
 
-- [ ] Diferencia entre `<div class="header">` y `<header>`
-- [ ] Diferencia entre `<input type="submit">` y `<button type="submit">`
-- [ ] Por qué `<dialog>` reemplaza modales hechos con divs + JS
-- [ ] Cuándo usar `section`, `article` y `aside` (y cuándo no)
-- [ ] Qué hace cada metadato del `<head>` y por qué importa
-- [ ] Atributos booleanos: por qué `disabled` y no `disabled="true"`
+- [x] Diferencia entre `<div class="header">` y `<header>`
+- [x] Diferencia entre `<input type="submit">` y `<button type="submit">`
+- [x] Por qué `<dialog>` reemplaza modales hechos con divs + JS
+- [x] Cuándo usar `section`, `article` y `aside` (y cuándo no)
+- [x] Qué hace cada metadato del `<head>` y por qué importa
 
 ---

@@ -66,6 +66,25 @@
     </nav>
   </header>
 
+  <!-- dialog nativo -->
+  <dialog id="modal">
+    <h2>¿Sabias que puedes abrir un modal así?</h2>
+    <p>¡Y es totalmente nativo!</p>
+    <button id="close">Cerrar Modal</button>
+  </dialog>
+  <button id="show">Mas Información</button>
+
+  <script>
+    window.show.addEventListener("click", () => {
+      window.modal.showModal();
+    });
+
+    window.close.addEventListener("click", () => {
+      window.modal.close();
+    });
+    /* cada vez que se agega un id, se agrega una propiedad en el objeto window */
+  </script>
+
   <!-- submit, button, video y audio -->
   <!--   <video 
     src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4" 
