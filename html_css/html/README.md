@@ -1,40 +1,45 @@
 # HTML Lab — Aprendizaje incremental de HTML moderno
 
-Laboratorio personal para aprender HTML desde cero, basado en el curso
-de [Midudev](https://www.youtube.com/watch?v=3nYLTiY5skU). Un único `index.html` que evoluciona commit a commit.
+Laboratorio personal para aprender HTML desde cero, basado en el curso de [Midudev](https://www.youtube.com/watch?v=3nYLTiY5skU). Un único `index.html` que evoluciona commit a commit.
 
 > No es un curso consumido. Es un historial de aprendizaje.
 
 ---
 
-## Filosofía de trabajo (mía)
+## Filosofía de trabajo
 
 - **Un único `index.html` de laboratorio.** No creo una página nueva por
   capítulo. Enriquezco la misma página desde los fundamentos hasta `<dialog>`.
-- **Git como historial de aprendizaje**, no solo como backup. Dentro de
-  seis meses quiero poder mirar `git log` y ver exactamente qué aprendí
-  y cómo evolucionó el código.
+- **Git como historial de aprendizaje**, no solo como backup.
 - **Ciclo por bloque:** ver → implementar/experimentar → modificar código
   → probar en el navegador → commit.
-- **El video es un roadmap de commits**, no una lista de capítulos para
-  tildar. No commiteo por haber mirado. Commiteo por haber construido.
-- **Cada commit deja el proyecto ejecutable y funcional.** Si un commit rompe
-  algo, ese sprint fue demasiado grande o mal cerrado.
+- **El video es un roadmap**, no una lista de capítulos para tildar.
+  No commiteo por haber mirado. Commiteo por haber construido.
+- **Cada commit deja el proyecto ejecutable y funcional.**
 
-## Rigor técnico (del plan híbrido)
+## Rigor técnico
 
-- **Checkpoints verificables:** cada commit tiene un entregable concreto
-  que se puede comprobar en el navegador.
 - **Convención de commits:** `tipo(scope): mensaje`
   - `chore` setup · `feat` funcionalidad · `style` estilos
   - `docs` documentación · `refactor` mejora sin cambio de comportamiento
-- **Tags de checkpoint:** `git tag checkpoint-01`, etc.
+- **Tags:** uno por curso, al cierre (`html`, `css-basico`, ...)
 - **Granularidad:** ~8–10 min por commit. Si un commit se siente pesado,
   se desdobla.
 
+## Tags
+
+Cada tag marca el cierre de un curso. Todo lo que está entre un tag y el
+siguiente pertenece a ese curso.
+
+- `html` — curso de HTML completo
+
 ---
 
-## Roadmap de commits
+## Roadmap de checkpoints
+
+Los checkpoints representan bloques de contenido comprendidos, no commits
+exactos. Un checkpoint puede abarcar varios commits o fusionarse con otro
+si el contenido era magro.
 
 - [x] **01** `00:00–12:52`     · abre en el navegador con estructura mínima
 - [x] **02** `12:52–15:48`     · contenido estructurado con jerarquía
@@ -53,25 +58,24 @@ de [Midudev](https://www.youtube.com/watch?v=3nYLTiY5skU). Un único `index.html
 
 ---
 
-## Estructura del repositorio
+## Estructura
 
 ```
-/
-├── index.html          # laboratorio único, evoluciona con cada commit
+html/
+├── index.html
 ├── assets/
 │   └── images/
-│       └── profile.jpg
-└── README.md           # este archivo
+│       ├── tesla.png
+│       └── yo.jpg
+└── README.md
 ```
 
 ---
 
-## Conceptos que quiero dominar al final
+## Conceptos que quiero dominar
 
 - [x] Diferencia entre `<div class="header">` y `<header>`
 - [x] Diferencia entre `<input type="submit">` y `<button type="submit">`
 - [x] Por qué `<dialog>` reemplaza modales hechos con divs + JS
 - [x] Cuándo usar `section`, `article` y `aside` (y cuándo no)
 - [x] Qué hace cada metadato del `<head>` y por qué importa
-
----
