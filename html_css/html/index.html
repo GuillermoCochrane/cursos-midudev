@@ -134,6 +134,28 @@
       </article>
     </section>
 
+    <section>
+      <h2>Preguntas frecuentes</h2>
+      <details open>
+        <summary>¿Qué estudios tienes?</summary>
+        <p>
+          Estudie en la Universidad de Vilanova Ingeniería en Informática durante 5 años.
+        </p>
+      </details>
+      <details>
+        <summary>¿Cuales son tus hobbies?</summary>
+        <p>
+          Me gusta mucho el deporte, especialmente el fútbol y el baloncesto.
+        </p>
+      </details>
+      <details>
+        <summary>¿Cual es tu lenguaje favorito?</summary>
+        <p>
+          Me encanta el JavaScript, es un lenguaje muy versátil y con una el que se puede hacer muchas cosas.
+        </p>
+      </details>
+    </section>
+
     <!-- formulario funcional con fieldset, label e input -->
     <section>
       <form method="post" action="/">
@@ -142,10 +164,14 @@
           <div>
             <label>
               Nombre
+              <!-- validaciones, datalist y details -->
               <input 
                 type="text" 
                 name="nombre" 
                 placeholder="Miguel Ángel Durán"
+                required
+                minlength="3"
+                maxlength="30"
               >
             </label>
           </div> 
@@ -155,6 +181,7 @@
             type="email" 
             name="email" 
             placeholder="midudev@gmail.com"
+            required
           >
           </label>
         </fieldset>
@@ -167,10 +194,44 @@
               type="tel" 
               name="telefono" 
               placeholder="562 298 9200"
+              required
+              pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
             >
           </label>
         </fieldset>
-        <button type="submit">Enviar</button>
+
+        <fieldset>
+          <legend>Otros</legend>
+          <div>
+            <label for="why">¿Por qué quieres contactarme?</label>
+            <select name="why" id="why">
+              <option value="1">Trabajo</option>
+              <option value="2">Dudas</option>
+              <option value="3">Más información</option>
+            </select>
+          </div>
+          <div>
+            <label for="terms">¿Aceptas los términos?</label>
+            <input type="checkbox" name="terms" id="terms" required>
+          </div>
+          <div>
+            <datalist id="languajes">
+              <option value="JavaScript"></option>
+              <option value="Python"></option>
+              <option value="C#"></option>
+            </datalist>
+            <label>
+              ¿Con qué lenguaje quieres que te ayude?
+              <input 
+                type="text" 
+                name="languages"
+                list="languajes"
+                placeholder="Escribe tu lenguaje favorito"
+              >
+            </label>
+          </div>
+        </fieldset>
+        <button>Enviar Contacto</button>
       </form>
     </section>
   </main>
