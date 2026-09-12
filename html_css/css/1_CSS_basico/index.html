@@ -46,6 +46,17 @@
         se puede usar cuando cada canal se repite => #dff == #ddffff
         #(rojo)xx(azul)xx(verde)xx == #(rojo)x(azul)x(verde)x
       */
+      font-family: system-ui, sans-serif;
+      /* 
+        herencia: los estilos de body se aplican a los elementos hijos del mismo.
+        ej: la  fuente seteada en body se aplica en todo el documento.
+        no todas la propiedad se herdan, x ejemplo, el border, pero se puede  forzar la herencia con border: inherit;
+        otras propiededes:
+          border: inherit;  forzamos la herencia del valor del elemento padre.
+          border: initial;  valor por incial definido del navegador.
+          border: unset;    quita las propiedades del elemento, resetea el valor.
+          border: revert;   revertimos el valor de la herencia.
+      */
     }
 
     .link {

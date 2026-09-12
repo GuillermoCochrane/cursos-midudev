@@ -14,8 +14,8 @@ se reutiliza el mismo `index.html`.
 - [x] **02** `00:00:00–00:17:08` — Introducccion: estilos básicos inline
 - [x] **03** `00:17:08–00:28:03` — Colores, transparencia y currentColor
 - [x] **04** `00:28:03–00:32:35` — Selectores de clase e ID
-- [ ] **05** `00:32:35–00:42:17` — `inherit`, `initial`, `unset` aplicados
-- [ ] **06** `00:42:17–00:49:40` — `hover`, `focus`, `first-child`, `last-child`
+- [x] **05** `00:32:35–00:42:17` — Herencia: `inherit`, `initial`, `unset` y `revert`
+- [ ] **06** `00:42:17–00:49:40` — Pseudoclases: `hover`, `focus`, `first-child`, `last-child`, etc.
 - [ ] **07** `00:49:40–01:02:52` — descendientes, hijos y hermanos
 - [ ] **08** `01:02:52–01:08:04` — reglas que se sobrescriben y fallbacks
 - [ ] **09** `01:08:04–01:18:37` — resolución de conflictos y `!important`
