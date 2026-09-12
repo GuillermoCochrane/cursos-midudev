@@ -23,6 +23,7 @@
     
     h1 {
       color: #09f;
+      font-family: monospace; /* al setear el valor, se ignora el heredado */
       /* 
         color: #09fa;  == #0099ffaa  cuarto par indica transparencia 
         color: rgba(0, 0, 0, 50%);  legacy, usar el siguiente
@@ -40,11 +41,21 @@
     }
 
     body {
-      background-color: #dff; 
+      background-color: #dff;
       /*
         se puede usar cuando cada canal se repite => #dff == #ddffff
         #(rojo)xx(azul)xx(verde)xx == #(rojo)x(azul)x(verde)x
       */
+    }
+
+    .link {
+      color: red;
+    }
+
+    #show {
+      background-color: #09f;
+      color: white;
+      border: 0;
     }
   </style>
 </head>
@@ -59,16 +70,18 @@
       allowfullscreen
     ></iframe> -->
     <nav>
-      <a href="#experiencia">Experiencia</a>
-      <a href="#proyectos">Proyectos</a>
-      <a 
+      <a class="link" href="#experiencia">Experiencia</a>
+      <a class="link" href="#proyectos">Proyectos</a>
+      <a
+        class="link"
         href="https://twitch.tv/midudev" 
         target="_blank"
         rel="noreferrer"
       >
         Twitch
       </a>
-      <a 
+      <a
+        class="link"
         href="https://github.com/midudev" 
         target="_blank"
         rel="noreferrer"
