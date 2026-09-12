@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width">
+  <title>Curso de HTML - Midudev</title>
+  <meta name="description" content="Portafolio de Midudev, 15 años de experiencia como Ingeniero de Software."> 
+
+  <meta property="og:title" content="Portafolio de Midudev">
+  <meta property="og:description" content="Portafolio de Midudev, 15 años de experiencia como Ingeniero de Software.">
+  <meta property="og:image" content="assets/images/yo.jpg">
+  <meta property="og:image:alt" content="Imagen de perfil de Midudev">
+
+  <link rel="alternate" href="https://midu.dev/en" hreflang="en-GB"> 
+  <link rel="alternate" href="https://midu.dev/es" hreflang="es-ES"> 
+  <link rel="canonical" href="https://midu.dev/"> 
+
+  <meta name="robots" content="index, follow"> 
+  <meta name="theme-color" content="#09f"> 
+  <link rel="icon" href="https://midu.dev/favicon.svg" type="image/svg+xml">
+
+  <style> 
+    body {
+      background-color: #09f;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Portfolio de Midudev</h1>
+    <!-- <iframe
+      src="https://www.youtube.com/embed/3nYLTiY5skU"
+      style="width: 95%; aspect-ratio: 16/9; margin: auto; display: block;"
+      title="Curso de HTML - Midudev"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe> -->
+    <nav>
+      <a href="#experiencia">Experiencia</a>
+      <a href="#proyectos">Proyectos</a>
+      <a 
+        href="https://twitch.tv/midudev" 
+        target="_blank"
+        rel="noreferrer"
+      >
+        Twitch
+      </a>
+      <a 
+        href="https://github.com/midudev" 
+        target="_blank"
+        rel="noreferrer"
+      >
+        GitHub
+      </a>
+    </nav>
+  </header>
+
+  <dialog id="modal">
+    <h2>¿Sabias que puedes abrir un modal así?</h2>
+    <p>¡Y es totalmente nativo!</p>
+    <button id="close">Cerrar Modal</button>
+  </dialog>
+  <button id="show">Mas Información</button>
+
+  <script>
+    window.show.addEventListener("click", () => {
+      window.modal.showModal();
+    });
+
+    window.close.addEventListener("click", () => {
+      window.modal.close();
+    });
+  </script>
+
+  <!--   
+  <video 
+    src="https://filesamples.com/samples/video/mp4/sample_960x400_ocean_with_audio.mp4" 
+    autoplay
+    muted
+    loop
+  > 
+  </video>
+
+  <audio 
+    src="https://download.samplelib.com/mp3/sample-15s.mp3" 
+    controls
+  > 
+  -->
+
+  <main>
+
+    <p>+ 15 años de experiencia como <strong>Ingeniero de Software</strong>. Creador y divulgador de progamación.</p>
+
+    <h2 id="experiencia">Experiencia</h2>
+    <ul>
+      <li>Adevinta - 2022</li>
+      <li>Hubii - 2020</li>
+      <li>Nacencia - 2015</li>
+    </ul> 
+
+    <a download href="assets/images/yo.jpg"> 
+      <img 
+        width=200 
+        height=200
+        src="assets/images/yo.jpg" 
+        alt="Imagen de perfil de Midudev" 
+        title="Imagen de perfil de Midudev" 
+      >
+    </a>
+
+    <h2 id="proyectos">Proyectos Realizados</h2>
+
+    <aside role="complementary"> 
+      <header>
+        <h3>Mis Tecnologías Favoritas</h3>
+      </header>
+      <ol type="1" reversed start="10">
+        <li>HTML</li>
+        <li>CSS</li>
+        <li value="5">JavaScript</li>
+        <li>Node.js</li>
+      </ol>
+    </aside>
+
+    <section> 
+      <article>
+        <header>
+          <h4>La página de Tesla</h4>
+          <img 
+            src="assets/images/tesla.png" 
+            alt="Captura de pantalla de la página web de Tesla"
+            loading="lazy"
+            style="width: 95%; aspect-ratio: 958/433; margin: auto; display: block;"
+          >
+        </header>
+        <p>
+          Elon Musk me llamó e hice en una tarde esta página desde cero.
+        </p>
+        <footer>
+          <small>Tecnologías Utilizadas: HTML, CSS, JavaScript</small>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <h4>Aplicacion Web de E-Commerce</h4>
+        </header>
+        <p>
+          Creación de una plataforma de comercio electrónico para un comercio local
+        </p>
+        <footer>
+          <small>Tecnologías Utilizadas: React, Node.js, MongoDB</small>
+        </footer>
+      </article>
+
+      <article>
+        <header>
+          <h4>Aplicacion Movil de Rastreo de Fitness</h4>
+        </header>
+        <p>
+          Creación de una aplicación móvil para rastrear el progreso de un usuario en un entrenamiento de fitness.
+        </p>
+        <footer>
+          <small>Tecnologías Utilizadas: React Native, Node.js, MongoDB</small>
+        </footer>
+      </article>
+    </section>
+
+    <section>
+      <h2>Preguntas frecuentes</h2>
+      <details open>
+        <summary>¿Qué estudios tienes?</summary>
+        <p>
+          Estudie en la Universidad de Vilanova Ingeniería en Informática durante 5 años.
+        </p>
+      </details>
+      <details>
+        <summary>¿Cuales son tus hobbies?</summary>
+        <p>
+          Me gusta mucho el deporte, especialmente el fútbol y el baloncesto.
+        </p>
+      </details>
+      <details>
+        <summary>¿Cual es tu lenguaje favorito?</summary>
+        <p>
+          Me encanta el JavaScript, es un lenguaje muy versátil y con una el que se puede hacer muchas cosas.
+        </p>
+      </details>
+    </section>
+
+    <section>
+      <form method="post" action="/">
+        <fieldset>
+          <legend>Formulario de Contacto</legend>
+          <div>
+            <label>
+              Nombre
+              <input 
+                type="text" 
+                name="nombre" 
+                placeholder="Miguel Ángel Durán"
+                required
+                minlength="3"
+                maxlength="30"
+              >
+            </label>
+          </div> 
+          <label>
+            Email
+            <input 
+            type="email" 
+            name="email" 
+            placeholder="midudev@gmail.com"
+            required
+          >
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Información adicional</legend>
+          <label>
+            Teléfono
+            <input 
+              type="tel" 
+              name="telefono" 
+              placeholder="562 298 9200"
+              required
+              pattern="[0-9]{3} [0-9]{3} [0-9]{4}"
+            >
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Otros</legend>
+          <div>
+            <label for="why">¿Por qué quieres contactarme?</label>
+            <select name="why" id="why">
+              <option value="1">Trabajo</option>
+              <option value="2">Dudas</option>
+              <option value="3">Más información</option>
+            </select>
+          </div>
+          <div>
+            <label for="terms">¿Aceptas los términos?</label>
+            <input type="checkbox" name="terms" id="terms" required>
+          </div>
+          <div>
+            <datalist id="languajes">
+              <option value="JavaScript"></option>
+              <option value="Python"></option>
+              <option value="C#"></option>
+            </datalist>
+            <label>
+              ¿Con qué lenguaje quieres que te ayude?
+              <input 
+                type="text" 
+                name="languages"
+                list="languajes"
+                placeholder="Escribe tu lenguaje favorito"
+              >
+            </label>
+          </div>
+        </fieldset>
+        <button>Enviar Contacto</button>
+      </form>
+    </section>
+  </main>
+  <footer>
+    <p>Copyright © 2026 - El portafolio más bello del mundo</p>
+    <a href="mailto:midudev@gmail.com">Enivame un correo</a>
+    <a href="tel:+5622989200">Llameme por teléfono</a>
+  </footer>
+</body>
+</html>
