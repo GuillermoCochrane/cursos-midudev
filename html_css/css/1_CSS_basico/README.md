@@ -10,8 +10,8 @@ se reutiliza el mismo `index.html`.
 
 ## Roadmap de checkpoints
 
-- [ ] **01** `-----------------` — `index.html` copiado desde `html/`, limpio de comentarios
-- [ ] **02** `00:00:00–00:17:08` — `assets/css/styles.css` creado y enlazado, body con estilos básicos
+- [x] **01** `-----------------` — `index.html` copiado desde `html/`, limpio de comentarios
+- [x] **02** `00:00:00–00:17:08` — Introducccion: estilos básicos inline
 - [ ] **03** `00:17:08–00:28:03` — body estilado y paleta aplicada
 - [ ] **04** `00:28:03–00:32:35` — selectores por clase e ID funcionando
 - [ ] **05** `00:32:35–00:42:17` — `inherit`, `initial`, `unset` aplicados
@@ -51,3 +51,7 @@ se reutiliza el mismo `index.html`.
 - [ ] Por qué existen reset y normalize
 - [ ] Diferencia entre `>` y ` ` (espacio) como combinadores
 - [ ] Qué es `currentColor` y cuándo usarlo
+
+---
+
+- `assets/css/styles.css` creado y enlazado
