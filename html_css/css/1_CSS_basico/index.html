@@ -20,15 +20,32 @@
   <link rel="icon" href="https://midu.dev/favicon.svg" type="image/svg+xml">
 
   <style> 
-    body {
-      background-color: #09f; /* se puede usar cuando cada canal se repite => #09f == #0099ff  */
-      /* background-color: #09fa;  == #0099ffaa  cuarto par indica transparencia */
-    }
-
+    
     h1 {
-      color: blue; /* se puede usar palabras clave */
+      color: #09f;
+      /* 
+        color: #09fa;  == #0099ffaa  cuarto par indica transparencia 
+        color: rgba(0, 0, 0, 50%);  legacy, usar el siguiente
+        color: rgb (0 0 0 / 50%); moderno
+        color: hsl(60, 100%, 44%); rotación, saturación, luminosidad
+        color: oklch(50%, 0%, 0%, 50%); luminosidad, croma, matiz, alpha
+        color: blue; se puede usar palabras clave
+        color: transparent; uso de palabras clave
+
+        border-width: 3px;
+        border-style: solid;
+        border-color: currentColor;  usa el color actual del texto del elemento 
+
+      */
     }
 
+    body {
+      background-color: #dff; 
+      /*
+        se puede usar cuando cada canal se repite => #dff == #ddffff
+        #(rojo)xx(azul)xx(verde)xx == #(rojo)x(azul)x(verde)x
+      */
+    }
   </style>
 </head>
 <body>

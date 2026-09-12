@@ -12,7 +12,7 @@ se reutiliza el mismo `index.html`.
 
 - [x] **01** `-----------------` — `index.html` copiado desde `html/`, limpio de comentarios
 - [x] **02** `00:00:00–00:17:08` — Introducccion: estilos básicos inline
-- [ ] **03** `00:17:08–00:28:03` — body estilado y paleta aplicada
+- [x] **03** `00:17:08–00:28:03` — Colores, transparencia y currentColor
 - [ ] **04** `00:28:03–00:32:35` — selectores por clase e ID funcionando
 - [ ] **05** `00:32:35–00:42:17` — `inherit`, `initial`, `unset` aplicados
 - [ ] **06** `00:42:17–00:49:40` — `hover`, `focus`, `first-child`, `last-child`
