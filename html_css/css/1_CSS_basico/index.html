@@ -63,10 +63,41 @@
       color: red;
     }
 
+    /* pseudoclases: "estados"o situaciones de los elementos html */
+
+    .link:hover{ /* cuando se pasa el mouse sobre el elemento */
+      outline: 1px solid red; 
+      /*
+        outline no afecta el tamaño del elemento, se dibuja sobre mismo.
+        border: 1px solid red; // afecta el tamaño del elemento
+        som similares, pero uno afecta el tamaño del elemento y el otro no.
+      */
+    }
+
+    .link:active{ /* cuando se interactua con el elemento */
+      outline: 1px solid blue;
+    }
+
+    .link:focus{ /* cuando el elemento tiene el foco (por ejemplo, un input seleccionado) */
+      outline: 1px solid green;
+    }
+
     #show {
       background-color: #09f;
       color: white;
       border: 0;
+    }
+
+    li {
+      color: pink;
+    }
+
+    li:first-child {
+      color: purple;
+    }
+
+    li:last-child {
+      color: orange;
     }
   </style>
 </head>
