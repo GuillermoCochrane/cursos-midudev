@@ -16,14 +16,14 @@ se reutiliza el mismo `index.html`.
 - [x] **04** `00:28:03–00:32:35` — Selectores de clase e ID
 - [x] **05** `00:32:35–00:42:17` — Herencia: `inherit`, `initial`, `unset` y `revert`
 - [x] **06** `00:42:17–00:49:40` — Pseudoclases: `hover`, `focus`, `first-child`, `last-child`, etc.
-- [ ] **07** `00:49:40–01:02:52` — descendientes, hijos y hermanos
-- [ ] **08** `01:02:52–01:08:04` — reglas que se sobrescriben y fallbacks
-- [ ] **09** `01:08:04–01:18:37` — resolución de conflictos y `!important`
-- [ ] **10** `01:18:37–01:24:26` — `px`, `em`, `rem`, `%`, `vw`, `vh`
-- [ ] **11** `01:24:26–01:27:00` — base consistente entre navegadores
-- [ ] **12** `01:27:00–01:34:40` — comprensión del box model
-- [ ] **13** `01:34:40–01:40:35` — propiedades aplicadas correctamente
-- [ ] **14** `01:40:35–01:42:24` — control de tamaño con `border-box`
+- [x] **07** `00:49:40–01:02:52` — Selectores combinados y operadores: descendientes, hijos y hermanos
+- [ ] **08** `01:02:52–01:08:04` — Cascada y fallbacks: reglas que se sobrescriben y fallbacks
+- [ ] **09** `01:08:04–01:18:37` — Especificidad y estilos en línea: resolución de conflictos y `!important`
+- [ ] **10** `01:18:37–01:24:26` — Unidades: `px`, `em`, `rem`, `%`, `vw`, `vh`
+- [ ] **11** `01:24:26–01:27:00` — Reset y normalize: base consistente entre navegadores
+- [ ] **12** `01:27:00–01:34:40` — Modelo de caja
+- [ ] **13** `01:34:40–01:40:35` — Margin, padding y border
+- [ ] **14** `01:40:35–01:42:24` — Box sizing: Control de tamaño con `border-box`
 
 ---
 

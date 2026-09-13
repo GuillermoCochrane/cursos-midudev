@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://midu.dev/favicon.svg" type="image/svg+xml" />
+    <title>Selectores convinados</title>
+    <style>
+      /*
+      hacer en hoja html separado
+      selectores combinados: 
+        sirven para seleccionar elementos que cumplen múltiples condiciones, por ejemplo:
+
+        <p class="title">
+          Mi <strong class="bold">primer</strong> titulo.
+          <br>
+          Mi <strong class="bold">segundo</strong> titulo.
+        </p>
+
+        <p class="subtitle">
+          Mi <strong class="bold">primer</strong> titulo.
+          <br>
+          Mi <strong class="bold">segundo</strong> titulo.
+        </p>
+
+        .title .bold { el hijo de class bold que tiene como padre el elemento title 
+          color: red;
+        }
+
+        .subtitle bold { el hijo de class bold que tiene como padre el elemento subtitle 
+          color: blue;
+        }
+     */
+
+      /* ejemplo 1: selectores convinados */
+      p {
+        font-size: 48px;
+      }
+
+      .description .bold {
+        color: #09f;
+      }
+
+      .secondary .bold {
+        color: red;
+      }
+
+      /* ejemplo 2: herencia */
+      /* Tener cuidado con la herencia, porque puede aplicarse varias veces como se ve en el ejemplo */
+      ul {
+        font-size: 64px;
+      }
+
+      ul li {
+        opacity: 70%;
+      }
+
+      /* ejemplo 3: hijos directos */
+      /* Son los elementos que tienen como padre el elemento actual */
+      /* > aplica solo a los hijos directos, solo afecta al primer nivel, no a los elementos anidados dentro de hijos directos */
+      article {
+        font-size: 24px;
+      }
+
+      article > p {
+        color: blue;
+      }
+
+      /* ejemplo 4: hermano  */
+      /* ~ afecta a elementos que está después del elemento  */
+      p ~ span {
+        color: red;
+      }
+
+      /* ejemplo 5: hermano directo */
+      /* + afecta a elementos que están después del elemento, sin ninguno que los separe  */
+      p.hd + span {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <h2>Ejemplo 1: Selectores convinados</h2>
+      <strong>La frase que te cambiará la vida</strong>
+
+      <p class="description">
+        Joven emponzoñado de <strong class="bold">whisky</strong>, menuda
+        <strong class="bold">figurota</strong>!
+      </p>
+
+      <p class="secondary">
+        Joven emponzoñado de <strong class="bold">whisky</strong>, menuda
+        <strong class="bold">figurota</strong>!
+      </p>
+    </section>
+    <section>
+      <h2>Ejemplo 2: Herencia</h2>
+      <ul>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>
+          <ul>
+            <li>Sub Item 1</li>
+            <li>Sub Item 2</li>
+            <li>Sub Item 3</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+    <section>
+      <h2>Ejemplo 3: Hijos directos</h2>
+      <article>
+        <p>Este es el contenido del artículo</p>
+
+        <p>Otro artículo</p>
+
+        <footer>
+          <p>Escrito por midudev</p>
+          <p>Escrito por midudev</p>
+          <p>Escrito por midudev</p>
+        </footer>
+
+        <p>Para seguir</p>
+      </article>
+    </section>
+    <section>
+      <h2>Ejemplo 4: Hermano siguente</h2>
+      <article>
+        <span>Esto es negro porque no tiene un p antes</span>
+        <p>Parrafo</p>
+        <span> Esto está en rojo porque sale DESPUÉS de la p. </span>
+        <p>Whatever it may be, keep smiling.</p>
+        <h1>Dream big</h1>
+        <span>
+          Doesn't matter how many or what kind of nodes are in between, all
+          spans from the same parent after a paragraph are red.
+        </span>
+      </article>
+
+      <!-- si hubiera un p, el span sería rojo -->
+      <span>
+        This span is not red because it doesn't share a parent with a paragraph.
+      </span>
+    </section>
+    <section>
+      <h2>Ejemplo 5: Hermano directo</h2>
+      
+      <p class="hd">Hola</p>
+      <span>
+        el span  es azul porque es hermano directo de p  y nada lo separa
+      </span>
+      <span>
+        el span es no azul porque no es hermano directo de p porque los separa el span
+      </span>
+  </body>
+</html>
