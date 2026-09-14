@@ -123,9 +123,22 @@
       /* ejemplo 8: Modelo de caja */
       /*
         el modelo de caja es un modelo de diseño que se usa para definir el tamaño de los elementos de la pagina.
-        el tamaño de la caja esta determinado por el elemento propiamente dicho, el padding, el border y el margin.
+        el tamaño de la caja esta determinado por el elemento propiamente dicho, el padding y el border.
         el tamaño final de la caja es el tamaño del contenido + padding + border + margin.
       */
+
+      .contenedor {
+        width: 100px;
+        height: 100px;
+        padding: 10px; /* margen interno (dentro de borde)*/
+        border: 5px solid blue; 
+        margin: 10px; /* margen externo (fuera de borde)*/
+        background: orange;
+        /* 
+          El tamaño final de la caja es: 
+          5px + 10px + 100px + 10px + 5px = 130px
+        */
+      }
     </style>
   </head>
   <body>
@@ -212,6 +225,12 @@
     <section>
       <h2>Ejemplo 7: Unidades</h2>
       <div class="container">
+      </div>
+    </section>
+    <section>
+      <h2>Ejemplo 8: Modelo de caja</h2>
+      <div class="contenedor">
+        Esta caja
       </div>
     </section>
   </body>
