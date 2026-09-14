@@ -77,6 +77,27 @@
       p.hd + span {
         color: blue;
       }
+
+      /* ejemplo 6: cascada y especificidad */
+      /* los estilos de  css se aplican en cascada, los de mas abajo tiene mas peso que los de mas arriba */
+      /* especificidad: de acuerdo a que selector se aplica, se aplica el estilo mas especifico */
+      /*  !important > estilos inline > estilos de id > estilos de clase > estilo de etiqueta */
+      .text {
+        font-size: 24px;
+        color: #09f;
+        font-family: system-ui;
+        font-weight: bold;
+      }
+
+      #text {
+        color: purple;
+      }
+
+      em {
+        color: red;
+      }
+
+      /* X.Y.Z */
     </style>
   </head>
   <body>
@@ -145,13 +166,20 @@
     </section>
     <section>
       <h2>Ejemplo 5: Hermano directo</h2>
-      
       <p class="hd">Hola</p>
       <span>
-        el span  es azul porque es hermano directo de p  y nada lo separa
+        el span es azul porque es hermano directo de p y nada lo separa
       </span>
       <span>
-        el span es no azul porque no es hermano directo de p porque los separa el span
+        el span es no azul porque no es hermano directo de p porque los separa
+        el span
       </span>
+    </section>
+    <section>
+      <h2>Ejemplo 6: Cascada y especificidad</h2>
+      <em id="text" class="text" style="color: orange">
+        Vamos a poner aquí un texto
+      </em>
+    </section>
   </body>
 </html>

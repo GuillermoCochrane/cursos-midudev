@@ -17,8 +17,8 @@ se reutiliza el mismo `index.html`.
 - [x] **05** `00:32:35–00:42:17` — Herencia: `inherit`, `initial`, `unset` y `revert`
 - [x] **06** `00:42:17–00:49:40` — Pseudoclases: `hover`, `focus`, `first-child`, `last-child`, etc.
 - [x] **07** `00:49:40–01:02:52` — Selectores combinados y operadores: descendientes, hijos y hermanos
-- [ ] **08** `01:02:52–01:08:04` — Cascada y fallbacks: reglas que se sobrescriben y fallbacks
-- [ ] **09** `01:08:04–01:18:37` — Especificidad y estilos en línea: resolución de conflictos y `!important`
+- [x] **08** `01:02:52–01:08:04` — Cascada y fallbacks: reglas que se sobrescriben y fallbacks
+- [x] **09** `01:08:04–01:18:37` — Especificidad y estilos en línea: resolución de conflictos y `!important`
 - [ ] **10** `01:18:37–01:24:26` — Unidades: `px`, `em`, `rem`, `%`, `vw`, `vh`
 - [ ] **11** `01:24:26–01:27:00` — Reset y normalize: base consistente entre navegadores
 - [ ] **12** `01:27:00–01:34:40` — Modelo de caja
