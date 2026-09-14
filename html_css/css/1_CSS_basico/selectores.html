@@ -97,7 +97,22 @@
         color: red;
       }
 
-      /* X.Y.Z */
+      /* ejemplo 7: elemento de linea, de bloque y  unidades */
+      /* 
+        px es la unidad absoluta mas usada 
+        % es relativo al contenedor padre (puede tener problema con el alto, si el contenedor no tiene altura fija)
+        vw es relativo al ancho de la ventana
+        vh es relativo al alto de la ventana
+        a los elementos de linea no se le puede definir ni el ancho ni el alto, se ajustan al contenido
+        los elementos de bloque ocupan toda la linea en que se encuentran, por lo tanto se "aplican" 
+        los de linea ocupan el ancho de su contenido, y pueden ubicarse un al lado del otro
+      */
+
+      .container {
+        width: 250px; 
+        height: 250px;
+        background: red;
+      }
     </style>
   </head>
   <body>
@@ -181,5 +196,9 @@
         Vamos a poner aquí un texto
       </em>
     </section>
+    <section>
+      <h2>Ejemplo 7: Unidades</h2>
+      <div class="container">
+      </div>
   </body>
 </html>
