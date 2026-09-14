@@ -138,6 +138,12 @@
           El tamaño final de la caja es: 
           5px + 10px + 100px + 10px + 5px = 130px
         */
+        /* 
+          Si queremos que el tamaño final sea igual al contenido, podemos usar box-sizing: border-box;
+          con esto, el tamaño final de la caja es 100px y tanto el padding como el border se aplican al interior del contenido.
+          el valor por defecto es content-box y con el, el padding y el border se aplican al exterior del contenido.
+        */
+        box-sizing: border-box;
       }
     </style>
   </head>
