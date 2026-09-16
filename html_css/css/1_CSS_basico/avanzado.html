@@ -23,16 +23,16 @@
           Mi <strong class="bold">segundo</strong> titulo.
         </p>
 
-        .title .bold { el hijo de class bold que tiene como padre el elemento title 
+        .title .bold { el descendiente de class bold que tiene como ancestro un elemento title
           color: red;
         }
 
-        .subtitle bold { el hijo de class bold que tiene como padre el elemento subtitle 
+        .subtitle bold { el descendiente de class bold que tiene como ancestro un elemento subtitle
           color: blue;
         }
      */
 
-      /* ejemplo 1: selectores convinados */
+      /* ejemplo 1: selectores combinados */
       p {
         font-size: 48px;
       }
@@ -67,13 +67,13 @@
       }
 
       /* ejemplo 4: hermano  */
-      /* ~ afecta a elementos que está después del elemento  */
+      /* ~  afecta a hermanos posteriores con el mismo padre  */
       p ~ span {
         color: red;
       }
 
       /* ejemplo 5: hermano directo */
-      /* + afecta a elementos que están después del elemento, sin ninguno que los separe  */
+      /* + afecta al hermano inmediatamente posterior, en el mismo padre */
       p.hd + span {
         color: blue;
       }
@@ -109,9 +109,9 @@
       */
 
       /*
-          Como antes cada navegador tenia sus estiloes por defecto. las webs se veian diferentes en cada navegador.
+          Como antes cada navegador tenia sus estilos por defecto. las webs se veian diferentes en cada navegador.
           La primer solucion era usar reset de todos los estilos, pero era ineficiente. (https://meyerweb.com/eric/tools/css/reset/)
-          Luego se creo normalize.css, que es estandarioz ciertos estilos sin resetearlos a todos. (https://necolas.github.io/normalize.css/)
+          Luego se creo normalize.css, que estandariza ciertos estilos sin resetearlos a todos. (https://necolas.github.io/normalize.css/)
        */
 
       .container {
@@ -149,7 +149,7 @@
   </head>
   <body>
     <section>
-      <h2>Ejemplo 1: Selectores convinados</h2>
+      <h2>Ejemplo 1: Selectores combinados</h2>
       <strong>La frase que te cambiará la vida</strong>
 
       <p class="description">
@@ -218,8 +218,7 @@
         el span es azul porque es hermano directo de p y nada lo separa
       </span>
       <span>
-        el span es no azul porque no es hermano directo de p porque los separa
-        el span
+        el span no es azul porque no es hermano directo de p porque los separa el span
       </span>
     </section>
     <section>
