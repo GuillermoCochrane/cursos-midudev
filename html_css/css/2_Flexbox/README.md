@@ -26,9 +26,9 @@ Parte del monorepo `html_css/`. Continúa después de `1_CSS_basico/`.
 - [x] **05** `00:25:06–00:31:49` — position fixed y sticky
 - [x] **06** `00:31:49–00:45:26` — z-index y contexto de apilamiento
 - [x] **07** `00:45:26–00:55:59` — introducción a flexbox, dirección y writing-mode
-- [ ] **08** `00:55:59–01:00:47` — flex-wrap y flex-flow
-- [ ] **09** `01:00:47–01:08:45` — control del espacio: grow, shrink, basis
-- [ ] **10** `01:08:45–01:13:51` — ejemplo práctico y order
+- [x] **08** `00:55:59–01:00:47` — flex-wrap y flex-flow
+- [x] **09** `01:00:47–01:08:45` — control del espacio: grow, shrink, basis
+- [x] **10** `01:08:45–01:13:51` — ejemplo práctico y order
 - [ ] **11** `01:13:51–01:18:56` — justify-content y gap
 - [ ] **12** `01:18:56–01:26:14` — align-items y eje cruzado
 - [ ] **13** `01:26:14–01:30:13` — patrones más usados
