@@ -35,11 +35,39 @@
         /* proximamente, se peritira poner un string que se pueda usar para el valor de text-overflow.*/
         text-overflow: ellipsis;
         /* Las barras de scroll se pueden estilizar con scrollbar-color:*/
-        /* color del tirador (thumb) y de la pista (track) */
-        scrollbar-color: #333333 #f1f1f1;
-        /*  y scrolbar-width: para el ancho de la barra de scroll (auto, thin (delgada) o none (oculta) ) */
         scrollbar-width: thin;
       }
+
+      .position {
+        background: rgb(188, 228, 255);
+      }
+
+      .position article {
+        border: 5px solid #000;
+        width: 250px;
+        height: 250px;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      /* Position: Permite controlar la posición de un elemento del DOM. */
+      /* eL valor defecto es static, que significa que el elemento permanece en su posición normal.*/
+      /* position: absolute permite posicionar un elemento relativamente a otro elemento. (deja de estar en el flujo del DOM) */
+      /* por defecto, el elemento se posiciona relativamente document.body. y se fijan mediante top, right, bottom y left.*/
+      /* position: relative permite que fijar como referencia a un elemento padre para la posicion de un elemento hijo.*/
+      /* se puede centrar un elemento con position: absolute y top:0, bottom:0, left:0, right:0 y margin: auto. (util para modales*/
+      /* inset: 0  es lo mismo que top: 0, bottom: 0, left: 0, right: 0*/
+
+      .position article .container {
+        background: #09f;
+        width: 100px;
+        height: 100px;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
+
     </style>
   </head>
   <body>
@@ -50,6 +78,12 @@
       <section class="overflow">
         <h2>Ejemplo 1: Overflow</h2>
         <div class="container">CSS IS AWESOME</div>
+      </section>
+      <section class="position">
+        <h2>Ejemplo 2: position absolute y relative</h2>
+        <articke>
+          <div class="container"></div>
+        </articke>
       </section>
     </main>
   </body>

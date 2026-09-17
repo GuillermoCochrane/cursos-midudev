@@ -22,7 +22,7 @@ Parte del monorepo `html_css/`. Continúa después de `1_CSS_basico/`.
 - [x] **01** `-----------------` — setup del laboratorio
 - [x] **02** `00:00:00–00:07:47` — repaso del modelo de caja
 - [x] **03** `00:07:47–00:15:54` — overflow y text-overflow
-- [ ] **04** `00:15:54–00:25:06` — position relative y absolute
+- [x] **04** `00:15:54–00:25:06` — position relative y absolute
 - [ ] **05** `00:25:06–00:31:49` — position fixed y sticky
 - [ ] **06** `00:31:49–00:45:26` — z-index y contexto de apilamiento
 - [ ] **07** `00:45:26–00:55:59` — introducción a flexbox, dirección y writing-mode
