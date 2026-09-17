@@ -1,129 +1,175 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://midu.dev/favicon.svg" type="image/svg+xml" />
-    <title>Clase 2 — Flexbox</title>
-    <style>
-      body {
-        background: #09f;
-        margin: 0;
-      }
 
-      section {
-        background: lightgray;
-        margin-block: 10px;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" href="https://midu.dev/favicon.svg" type="image/svg+xml" />
+  <title>Clase 2 — Flexbox</title>
+  <style>
+    body {
+      background: #09f;
+      margin: 0;
+    }
 
-      .overflow .container {
-        width: 150px;
-        height: 150px;
-        background: white;
-        padding: 10px;
-        box-sizing: border-box;
-        font-size: 44px;
-        /* overflow nos permite controlar que pasa cuando el contenido supera el tamaño del elemento.*/
-        /* El valor por defecto es visible, que significa que el contenido que desborda el elemento se muestra.*/
-        /* hidden oculta el contenido que desborda el tamaño del contenedor.*/
-        /* scroll oculta el contenido, pero permite desplazarnos dentro del contenedor para ver el resto .*/
-        /* Con auto, el navegador determina el comportamiento del contenido que desborda el elemento.*/
-        overflow: hidden;
-        /* text-overflow nos permite controlar el comportamiento del contenido que desborda el elemento.*/
-        /* el valor por defecto es clip, que significa que el contenido que desborda el elemento se corta.*/
-        /* ellipsis muestra el contenido que desborda el elemento con puntos suspensivos.*/
-        /* proximamente, se peritira poner un string que se pueda usar para el valor de text-overflow.*/
-        text-overflow: ellipsis;
-        /* Las barras de scroll se pueden estilizar con scrollbar-color:*/
-        scrollbar-width: thin;
-      }
+    section {
+      background: lightgray;
+      margin-block: 10px;
+    }
 
-      .posicion,
-      .posicion2 {
-        background: rgb(188, 228, 255);
-      }
+    .overflow .container {
+      width: 150px;
+      height: 150px;
+      background: white;
+      padding: 10px;
+      box-sizing: border-box;
+      font-size: 44px;
+      /* overflow nos permite controlar que pasa cuando el contenido supera el tamaño del elemento.*/
+      /* El valor por defecto es visible, que significa que el contenido que desborda el elemento se muestra.*/
+      /* hidden oculta el contenido que desborda el tamaño del contenedor.*/
+      /* scroll oculta el contenido, pero permite desplazarnos dentro del contenedor para ver el resto .*/
+      /* Con auto, el navegador determina el comportamiento del contenido que desborda el elemento.*/
+      overflow: hidden;
+      /* text-overflow nos permite controlar el comportamiento del contenido que desborda el elemento.*/
+      /* el valor por defecto es clip, que significa que el contenido que desborda el elemento se corta.*/
+      /* ellipsis muestra el contenido que desborda el elemento con puntos suspensivos.*/
+      /* proximamente, se peritira poner un string que se pueda usar para el valor de text-overflow.*/
+      text-overflow: ellipsis;
+      /* Las barras de scroll se pueden estilizar con scrollbar-color:*/
+      scrollbar-width: thin;
+    }
 
-      .posicion .article {
-        border: 5px solid #000;
-        width: 250px;
-        height: 250px;
-        box-sizing: border-box;
-        position: relative;
-      }
+    .posicion,
+    .posicion2,
+    .zindex {
+      background: rgb(188, 228, 255);
+    }
 
-      /* Position: Permite controlar la posición de un elemento del DOM. */
-      /* eL valor defecto es static, que significa que el elemento permanece en su posición normal.*/
-      /* position: absolute permite posicionar un elemento relativamente a otro elemento. (deja de estar en el flujo del DOM) */
-      /* por defecto, el elemento se posiciona relativamente document.body. y se fijan mediante top, right, bottom y left.*/
-      /* position: relative permite que fijar como referencia a un elemento padre para la posicion de un elemento hijo.*/
-      /* se puede centrar un elemento con position: absolute y top:0, bottom:0, left:0, right:0 y margin: auto. (util para modales*/
-      /* inset: 0  es lo mismo que top: 0, bottom: 0, left: 0, right: 0*/
+    .posicion .article {
+      border: 5px solid #000;
+      width: 250px;
+      height: 250px;
+      box-sizing: border-box;
+      position: relative;
+    }
 
-      .posicion .article .container {
-        background: #09f;
-        width: 100px;
-        height: 100px;
-        position: absolute;
-        inset: 0;
-        margin: auto;
-      }
+    /* Position: Permite controlar la posición de un elemento del DOM. */
+    /* eL valor defecto es static, que significa que el elemento permanece en su posición normal.*/
+    /* position: absolute permite posicionar un elemento relativamente a otro elemento. (deja de estar en el flujo del DOM) */
+    /* por defecto, el elemento se posiciona relativamente document.body. y se fijan mediante top, right, bottom y left.*/
+    /* position: relative permite que fijar como referencia a un elemento padre para la posicion de un elemento hijo.*/
+    /* se puede centrar un elemento con position: absolute y top:0, bottom:0, left:0, right:0 y margin: auto. (util para modales*/
+    /* inset: 0  es lo mismo que top: 0, bottom: 0, left: 0, right: 0*/
 
-      .posicion2 .parent {
-        border: 5px solid #000;
-        width: 250px;
-        height: 500px;
-        box-sizing: border-box;
-        position: relative;
-      }
+    .posicion .article .container {
+      background: #09f;
+      width: 100px;
+      height: 100px;
+      position: absolute;
+      inset: 0;
+      margin: auto;
+    }
 
-      /* position: sticky permite que un elemento fije su posición en relación con su contenedor padre.*/
-      .posicion2 .parent .container {
-        background: #09f;
-        font-size: 44px;
-        width: 100px;
-        height: 100px;
-        position: sticky;
-        top: 0;
-        right: 0;
-      }
+    .posicion2 .parent {
+      border: 5px solid #000;
+      width: 250px;
+      height: 400px;
+      box-sizing: border-box;
+      position: relative;
+    }
 
-      /* position: fixed permite posicionar un elemento fijando su posición en relación con el viewport.*/
-      /* es decir, queda fijo en la pantalla, donde lo hayamos posicionado.*/
-      .posicion2 .parent .container.fixed {
-        position: fixed;
-        top: 0;
-        right: 0;
-        background: #f90;
-      }
-    </style>
-  </head>
-  <body>
-    <header>
-      <h1>Clase 2 — Flexbox</h1>
-    </header>
-    <main>
-      <section class="overflow">
-        <h2>Ejemplo 1: Overflow</h2>
-        <div class="container">CSS IS AWESOME</div>
-      </section>
-      <section class="posicion">
-        <h2>Ejemplo 2: position absolute y relative</h2>
-        <div class="article">
-          <div class="container"></div>
+    /* position: sticky permite que un elemento fije su posición en relación con su contenedor padre.*/
+    .posicion2 .parent .container {
+      background: #09f;
+      font-size: 44px;
+      width: 100px;
+      height: 100px;
+      position: sticky;
+      top: 0;
+      right: 0;
+    }
+
+    /* position: fixed permite posicionar un elemento fijando su posición en relación con el viewport.*/
+    /* es decir, queda fijo en la pantalla, donde lo hayamos posicionado.*/
+    .posicion2 .parent .container.fixed {
+      position: fixed;
+      top: 0;
+      right: 0;
+      background: #f90;
+    }
+
+    /* z-index permite controlar la posición de un elemento en relación con 
+      el resto de elementos del DOM que generan un contexto de apilamiento.*/
+
+    .zindex .parent {
+      background: #fff;
+      padding-top: 200px;
+    }
+
+    .zindex .parent div {
+      border: 1px solid;
+      opacity: .9;
+      width: 200px;
+      height: 200px;
+      background: #09f;
+      margin-top: -100px;
+      box-shadow: 0 0 5px #000000dd;
+      position: relative;
+    }
+
+    .zindex .parent div:first-child {
+      background: yellow;
+      z-index: 2;
+    }
+
+    .zindex .parent div:nth-child(2) {
+      background: #09f;
+      z-index: 1;
+    }
+
+    .zindex .parent div:last-child {
+      background: red;
+      z-index: 3;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Clase 2 — Flexbox</h1>
+  </header>
+  <main>
+    <section class="overflow">
+      <h2>Ejemplo 1: Overflow</h2>
+      <div class="container">CSS IS AWESOME</div>
+    </section>
+    <section class="posicion">
+      <h2>Ejemplo 2: position absolute y relative</h2>
+      <div class="article">
+        <div class="container"></div>
         </divarticke>
-      </section>
-      <section class="posicion2">
-        <h2>Ejemplo 3: position fixed y sticky</h2>
-        <div class="parent">
-          <div class="container">1</div>
-        </div>
-        <div class="parent">
-          <div class="container">2</div>
-        </div>
-        <div class="parent">
-          <div class="container fixed">3</div>
-        </div>
-      </section>
-    </main>
-  </body>
+    </section>
+    <section class="posicion2">
+      <h2>Ejemplo 3: position fixed y sticky</h2>
+      <div class="parent">
+        <div class="container">1</div>
+      </div>
+      <div class="parent">
+        <div class="container">2</div>
+      </div>
+      <div class="parent">
+        <div class="container fixed">3</div>
+      </div>
+    </section>
+    <section class="zindex">
+      <h2>Ejemplo 4: z-index</h2>
+      <div class="parent">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+      </div>
+    </section>
+  </main>
+</body>
+
 </html>
