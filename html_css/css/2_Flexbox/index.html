@@ -6,7 +6,40 @@
     <link rel="icon" href="https://midu.dev/favicon.svg" type="image/svg+xml" />
     <title>Clase 2 — Flexbox</title>
     <style>
+      body {
+        background: #09f;
+        margin: 0;
+      }
 
+      section {
+        background: lightgray;
+        margin-block: 10px;
+      }
+
+      .overflow .container {
+        width: 150px;
+        height: 150px;
+        background: white;
+        padding: 10px;
+        box-sizing: border-box;
+        font-size: 44px;
+        /* overflow nos permite controlar que pasa cuando el contenido supera el tamaño del elemento.*/
+        /* El valor por defecto es visible, que significa que el contenido que desborda el elemento se muestra.*/
+        /* hidden oculta el contenido que desborda el tamaño del contenedor.*/
+        /* scroll oculta el contenido, pero permite desplazarnos dentro del contenedor para ver el resto .*/
+        /* Con auto, el navegador determina el comportamiento del contenido que desborda el elemento.*/
+        overflow: hidden;
+        /* text-overflow nos permite controlar el comportamiento del contenido que desborda el elemento.*/
+        /* el valor por defecto es clip, que significa que el contenido que desborda el elemento se corta.*/
+        /* ellipsis muestra el contenido que desborda el elemento con puntos suspensivos.*/
+        /* proximamente, se peritira poner un string que se pueda usar para el valor de text-overflow.*/
+        text-overflow: ellipsis;
+        /* Las barras de scroll se pueden estilizar con scrollbar-color:*/
+        /* color del tirador (thumb) y de la pista (track) */
+        scrollbar-color: #333333 #f1f1f1;
+        /*  y scrolbar-width: para el ancho de la barra de scroll (auto, thin (delgada) o none (oculta) ) */
+        scrollbar-width: thin;
+      }
     </style>
   </head>
   <body>
@@ -14,9 +47,9 @@
       <h1>Clase 2 — Flexbox</h1>
     </header>
     <main>
-      <section>
+      <section class="overflow">
         <h2>Ejemplo 1: Overflow</h2>
-
+        <div class="container">CSS IS AWESOME</div>
       </section>
     </main>
   </body>
