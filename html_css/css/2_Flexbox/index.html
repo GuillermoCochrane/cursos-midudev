@@ -38,11 +38,12 @@
         scrollbar-width: thin;
       }
 
-      .position {
+      .posicion,
+      .posicion2 {
         background: rgb(188, 228, 255);
       }
 
-      .position article {
+      .posicion .article {
         border: 5px solid #000;
         width: 250px;
         height: 250px;
@@ -58,16 +59,42 @@
       /* se puede centrar un elemento con position: absolute y top:0, bottom:0, left:0, right:0 y margin: auto. (util para modales*/
       /* inset: 0  es lo mismo que top: 0, bottom: 0, left: 0, right: 0*/
 
-      .position article .container {
+      .posicion .article .container {
         background: #09f;
         width: 100px;
         height: 100px;
         position: absolute;
+        inset: 0;
+        margin: auto;
+      }
+
+      .posicion2 .parent {
+        border: 5px solid #000;
+        width: 250px;
+        height: 500px;
+        box-sizing: border-box;
+        position: relative;
+      }
+
+      /* position: sticky permite que un elemento fije su posición en relación con su contenedor padre.*/
+      .posicion2 .parent .container {
+        background: #09f;
+        font-size: 44px;
+        width: 100px;
+        height: 100px;
+        position: sticky;
         top: 0;
         right: 0;
       }
 
-
+      /* position: fixed permite posicionar un elemento fijando su posición en relación con el viewport.*/
+      /* es decir, queda fijo en la pantalla, donde lo hayamos posicionado.*/
+      .posicion2 .parent .container.fixed {
+        position: fixed;
+        top: 0;
+        right: 0;
+        background: #f90;
+      }
     </style>
   </head>
   <body>
@@ -79,11 +106,23 @@
         <h2>Ejemplo 1: Overflow</h2>
         <div class="container">CSS IS AWESOME</div>
       </section>
-      <section class="position">
+      <section class="posicion">
         <h2>Ejemplo 2: position absolute y relative</h2>
-        <articke>
+        <div class="article">
           <div class="container"></div>
-        </articke>
+        </divarticke>
+      </section>
+      <section class="posicion2">
+        <h2>Ejemplo 3: position fixed y sticky</h2>
+        <div class="parent">
+          <div class="container">1</div>
+        </div>
+        <div class="parent">
+          <div class="container">2</div>
+        </div>
+        <div class="parent">
+          <div class="container fixed">3</div>
+        </div>
       </section>
     </main>
   </body>
