@@ -30,9 +30,9 @@ Parte del monorepo `html_css/`. Continúa después de `1_CSS_basico/`.
 - [x] **09** `01:00:47–01:08:45` — control del espacio: grow, shrink, basis
 - [x] **10** `01:08:45–01:13:51` — ejemplo práctico y order
 - [x] **11** `01:13:51–01:18:56` — justify-content y gap
-- [ ] **12** `01:18:56–01:26:14` — align-items y eje cruzado
-- [ ] **13** `01:26:14–01:30:13` — patrones más usados
-- [ ] **14** `01:30:13–final`    — deberes
+- [x] **12** `01:18:56–01:26:14` — align-items y eje cruzado
+- [x] **13** `01:26:14–01:30:13` — patrones más usados
+- [x] **14** `01:30:13–final`    — deberes
 
 ---
 
@@ -48,13 +48,13 @@ Parte del monorepo `html_css/`. Continúa después de `1_CSS_basico/`.
 
 ## Conceptos que quiero dominar
 
-- [ ] Diferencia entre `position: relative`, `absolute`, `fixed` y `sticky`
-- [ ] Cómo funciona el contexto de apilamiento y cuándo `z-index` no funciona
-- [ ] Cuándo usar `overflow: hidden` vs `overflow: auto`
-- [ ] Diferencia entre `flex-grow`, `flex-shrink` y `flex-basis`
-- [ ] Qué es el eje principal y el eje cruzado en flexbox
-- [ ] Cuándo usar `justify-content` vs `align-items`
-- [ ] Diferencia entre `flex-wrap` y `flex-flow`
-- [ ] Qué hace `order` y cuándo tiene sentido usarlo
+- [x] Diferencia entre `position: relative`, `absolute`, `fixed` y `sticky`
+- [x] Cómo funciona el contexto de apilamiento y cuándo `z-index` no funciona
+- [x] Cuándo usar `overflow: hidden` vs `overflow: auto`
+- [x] Diferencia entre `flex-grow`, `flex-shrink` y `flex-basis`
+- [x] Qué es el eje principal y el eje cruzado en flexbox
+- [x] Cuándo usar `justify-content` vs `align-items`
+- [x] Diferencia entre `flex-wrap` y `flex-flow`
+- [x] Qué hace `order` y cuándo tiene sentido usarlo
 
 ---

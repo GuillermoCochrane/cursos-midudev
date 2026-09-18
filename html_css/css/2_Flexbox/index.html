@@ -252,14 +252,21 @@
     /* con flex-start, el contenido se distribuye desde la parte izquierda del contenedor.*/
     /* gap sirve para controlar el espacio entre los elementos en el eje principal.*/
 
+    /* align items sirve para controlar la alineacion del contenido en el eje cruzado.*/
+    /* el valor por defecto es stretch, que significa que el contenido se ajusta al tamaño del contenedor.*/
+    /* con flex-start, el contenido se alinea al principio del eje cruzado.*/
+    /* con flex-end, el contenido se alinea al final del eje cruzado.*/
+    /* con center, el contenido se centra en el eje cruzado.*/
+
     .flex3 .parent {
       display: flex;
       flex-direction: row; /* eje principal */
       border: 4px solid #000;
       width: 250px;
       box-sizing: border-box;
-      height: 300px;
       justify-content: center;
+      align-items: center; /* distribucion del espacio en el eje cruzado (del contenedor) */
+      align-content: center; /*  distribucion del contenido en el eje cruzado (en su fila). Sirve para contenido multilinea*/
       gap: 16px;
     }
 
@@ -269,6 +276,25 @@
       opacity: .9;
       height: 50px;
       height: 50px;
+    }
+
+    /* align-self sirve para controlar la alineacion del contenido en el eje cruzado.*/
+    /* el valor por defecto es auto, que significa que el contenido se ajusta al tamaño del contenedor.*/
+    /* con flex-start, el contenido se alinea al principio del eje cruzado.*/
+    /* con flex-end, el contenido se alinea al final del eje cruzado.*/
+    /* con center, el contenido se centra en el eje cruzado.*/
+
+    .flex3 .parent .item:first-child {
+      height: 25px;
+    }
+    
+    .flex3 .parent .item:nth-child(2) {
+      height: 30px;
+      align-self: flex-start;
+    }
+
+    .flex3 .parent .item:last-child {
+      height: 40px;
     }
 
   </style>
