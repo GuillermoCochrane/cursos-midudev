@@ -82,7 +82,8 @@
       position: relative;
     }
 
-    /* position: sticky permite que un elemento fije su posición en relación con su contenedor padre.*/
+    /* position: sticky se comporta como relative hasta alcanzar el umbral (top/bottom/left/right); */
+    /* a partir de ahí, se pega en esa posición mientras su contenedor padre siga visible. */
     .posicion2 .parent .container {
       background: #09f;
       font-size: 44px;
@@ -143,7 +144,7 @@
     /* tambien se puede usar column, row-reverse y column-reverse.*/
     /* direction permite controlar la direccion del texto dentro del contenedor.*/
     /* el valor por defecto es ltr, que significa que el texto se lee de izquierda a derecha.*/
-    /* tambien se puede usar rtl y ltr-reverse.*/
+    /* tambien se puede usar rtl */
     /* writing-mode permite controlar el modo de escritura dentro del contenedor.*/
     /* el valor por defecto es horizontal-tb, que significa que el texto se lee de izquierda a derecha.*/
     /* tambien se puede usar vertical-rl y vertical-lr.*/
@@ -174,7 +175,8 @@
     }
 
     /* flex-wrap permite controlar el comportamiento del tamaño de los hijos dentro del contenedor.*/
-    /* el valor por defecto es nowrap, que significa que los hijos adaptan su tamaño para "entrar" en el contenedor.*/
+    /*nowrap (default): los hijos no se envuelven; si no caben, se desbordan del contenedor (o se encogen por flex-shrink). */
+    /* wrap: los hijos que no entran pasan a la siguiente línea. */
     /* con wrap, los hijos que no entran en la linea del contenador, pasan a la siguiente linea.*/
     /* con flex-flow podemos convinar flex-direction y flex-wrap. en ele ejemplo, seria flex-flow: row wrap.*/
 
@@ -213,7 +215,7 @@
       height: 200px;
 
       flex-grow: 1; /* los elemntos no crecen si el valor es 0, si le sie l valor es 1, si  */
-      flex-shrink: 1; /* los elemntos pueden reducir su tamaño si el valor, a uno menor que el de su flex-basis. en 0 no se reducen */
+      flex-shrink: 1; /* cuánto se encoge el elemento si el contenedor es más chico que la suma de flex-basis. 0 = no se encoge. Default: 1. */
       flex-basis: 0; /* Tamaño base. con auto, es automatico, de acuerdo al contenido. le podemos poner un valor por defecto */
       /* flex-basis: 0; los elementos son todos del mismo ancho */
 
@@ -249,8 +251,8 @@
     /* con space-evenly, el contenido se distribuye entre los elementos, dejando el mismos espacio entre ellos y entre los extremos y ellos.*/
     /* con center, el contenido se centra en el eje principal.*/
     /* con fñex-end, el contenido se distribuye desde la parte derecha del contenedor.*/
-    /* con flex-start, el contenido se distribuye desde la parte izquierda del contenedor.*/
-    /* gap sirve para controlar el espacio entre los elementos en el eje principal.*/
+    /* con flex-start, el contenido se distribuye desde el inicio del eje principal.*/
+    /* gap controla el espacio entre los elementos, en ambos ejes (columnas y filas). */
 
     /* align items sirve para controlar la alineacion del contenido en el eje cruzado.*/
     /* el valor por defecto es stretch, que significa que el contenido se ajusta al tamaño del contenedor.*/
@@ -266,7 +268,7 @@
       box-sizing: border-box;
       justify-content: center;
       align-items: center; /* distribucion del espacio en el eje cruzado (del contenedor) */
-      align-content: center; /*  distribucion del contenido en el eje cruzado (en su fila). Sirve para contenido multilinea*/
+      align-content: center; /*  distribucion del contenido en el eje cruzado (en su fila). Sirve para contenido multilinea.  distribuye las líneas del contenedor cuando hay wrap*/
       gap: 16px;
     }
 
@@ -279,7 +281,7 @@
     }
 
     /* align-self sirve para controlar la alineacion del contenido en el eje cruzado.*/
-    /* el valor por defecto es auto, que significa que el contenido se ajusta al tamaño del contenedor.*/
+    /* auto (default): hereda el valor de align-items del contenedor. */
     /* con flex-start, el contenido se alinea al principio del eje cruzado.*/
     /* con flex-end, el contenido se alinea al final del eje cruzado.*/
     /* con center, el contenido se centra en el eje cruzado.*/
