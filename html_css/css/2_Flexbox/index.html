@@ -199,36 +199,39 @@
     /* flex-flow */
     .flex2 .parent {
       display: flex;
-      flex-flow: row wrap;
+      flex-flow: row nowrap;
       border: 4px solid #000;
-      width: 100px;
+      width: 200px;
       box-sizing: border-box;
     }
 
     .flex2 .parent .item {
       border: 1px solid;
+      box-sizing: border-box;
       opacity: .9;
-      width: 50px;
-      height: 100px;
-      background: #09f;
-      display: block;
+      height: 200px;
 
       flex-grow: 1; /* los elemntos no crecen si el valor es 0, si le sie l valor es 1, si  */
       flex-shrink: 1; /* los elemntos pueden reducir su tamaño si el valor, a uno menor que el de su flex-basis. en 0 no se reducen */
-      flex-basis: auto; /* Tamaño base. con auto, es automatico, de acuerdo al contenido. le podemos poner un valor por defecto */
-      /* flex: 1;  podemos agrupar los tres valores con flex: 1; que es lo mismo que flex:1 1 auto; y que  flex-grow: 1; flex-shrink: 1; flex-basis: auto;*/
+      flex-basis: 0; /* Tamaño base. con auto, es automatico, de acuerdo al contenido. le podemos poner un valor por defecto */
+      /* flex-basis: 0; los elementos son todos del mismo ancho */
+
+      /* flex: 1;  podemos agrupar los tres valores con flex: 1; que es lo mismo que flex:1 1 0; y que  flex-grow: 1; flex-shrink: 1; flex-basis: 0;*/
+      /* flex: initial es lo mismo que flex-grow: 0; flex-shrink: 1; flex-basis: auto; */
+      /* flex: auto es lo mismo que flex-grow: 1; flex-shrink: 1; flex-basis: auto; el contenido se ajusta al tamaño del contenedor */
     }
 
+    /* flex se puede usar para indicar el tamaño relativo de los elementos */
     /* podemos usar order para controlar el orden de los elementos dentro del contenedor. El los hijos se ordenan segun el valor de order, siendo el primero. el que tenga el menor valor de order. Si no se especifica, el orden es 0.*/
     .flex2 .parent .item:first-child {
       background: yellow;
       flex: 2; 
-      /* order: 3;  */
+      /* order: 3; */
     }
     
     .flex2 .parent .item:nth-child(2) {
-      background: #09f;
-      flex: 2; /* se puede usar para indicar el tamaño relativo de un elemento */
+      background: blue !important;
+      flex: 2; 
       /* order: 1; */
     }
 
