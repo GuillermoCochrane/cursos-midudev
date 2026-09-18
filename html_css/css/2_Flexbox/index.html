@@ -44,7 +44,8 @@
     .zindex,
     .flex,
     .flex1,
-    .flex2 {
+    .flex2,
+    .flex3 {
       background: rgb(188, 228, 255);
     }
 
@@ -241,6 +242,35 @@
       /* order: 2;  */
     }
 
+    /* justify-content sirve  para elegir como se distribuyen el coontenido en el eje principal */
+    /* el valor por defecto es flex-start, que significa que el contenido se distribuye desde la parte izquierda del contenedor.*/
+    /* con space-around, el contenido se distribuye entre los elementos, dejando el mismo el mismo espacio a cada lado de los elementos.*/
+    /* con space-between, el contenido se distribuye entre los elementos, dejamdo solo espacio entre ellos, y sin espacio a en los extremos.*/
+    /* con space-evenly, el contenido se distribuye entre los elementos, dejando el mismos espacio entre ellos y entre los extremos y ellos.*/
+    /* con center, el contenido se centra en el eje principal.*/
+    /* con fñex-end, el contenido se distribuye desde la parte derecha del contenedor.*/
+    /* con flex-start, el contenido se distribuye desde la parte izquierda del contenedor.*/
+    /* gap sirve para controlar el espacio entre los elementos en el eje principal.*/
+
+    .flex3 .parent {
+      display: flex;
+      flex-direction: row; /* eje principal */
+      border: 4px solid #000;
+      width: 250px;
+      box-sizing: border-box;
+      height: 300px;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    .flex3 .parent .item {
+      border: 1px solid;
+      box-sizing: border-box;
+      opacity: .9;
+      height: 50px;
+      height: 50px;
+    }
+
   </style>
 </head>
 
@@ -314,6 +344,20 @@
       <div class="parent">
         <div class="item">
           primero
+        </div>
+        <div class="item">
+          2
+        </div>
+        <div class="item">
+          3
+        </div>
+      </div>
+    </section>
+    <section class="flex3">
+      <h2>Ejemplo 8: Justify-content</h2>
+      <div class="parent">
+        <div class="item">
+          1
         </div>
         <div class="item">
           2
