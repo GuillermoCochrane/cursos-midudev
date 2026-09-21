@@ -68,6 +68,12 @@
       grid-template-rows:  repeat(3, 100px); 
       /*  es igual a grid-template-rows:  100px 100px 100px */
     }
+
+    /* minmax */
+    .grid-e4 {
+      grid-template-columns:  minmax(100px, 1fr) 1fr 1fr; 
+      /*  cuando el tamaño de la columna sea menor que 100px, el ancho sera 100px, si es mayor, se comportara como 1fr  (es similar al min-width) */
+    }
   </style>
 </head>
 
@@ -103,6 +109,18 @@
     <section>
       <h2>Ejemplo 3: Repeat, auto-fill y auto-fit </h2>
       <div class="grid grid-e3">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+      </div>
+    </section>
+    <section>
+      <h2>Ejemplo 4: Minmax </h2>
+      <div class="grid grid-e4">
         <div>1</div>
         <div>2</div>
         <div>3</div>

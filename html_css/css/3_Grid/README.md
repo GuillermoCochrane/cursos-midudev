@@ -26,7 +26,7 @@ Parte del monorepo `html_css/`. Continúa después de `2_Flexbox/`.
 - [x] **05** `00:17:01–00:24:07` — crear más columnas y la unidad `fr`
 - [x] **06** `00:24:07–00:30:11` — `grid-template-rows`, cuadrícula vacía y filas automáticas
 - [x] **07** `00:30:11–00:35:01` — propiedad `repeat()`
-- [ ] **08** `00:35:01–00:50:47` — ejercicio práctico y qué no hacer
+- [x] **08** `00:35:01–00:50:47` — `minmax()`, ejercicio práctico y qué no hacer
 - [ ] **09** `00:50:47–00:57:41` — auto-fill y auto-fit
 - [ ] **10** `00:57:41–01:00:06` — margin vs gap
 - [ ] **11** `01:00:06–01:10:54` — líneas de la cuadrícula y posicionamiento explícito
