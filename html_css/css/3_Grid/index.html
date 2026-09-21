@@ -23,7 +23,7 @@
       background-color: #ddd;
       margin-block: 1rem;
     }
-    
+
     .grid {
       background: lightsalmon;
       border: 3px solid #000;
@@ -41,7 +41,7 @@
 
     /* Grid básico */
     .grid-e1 {
-      grid-template-columns:  auto auto 20px; 
+      grid-template-columns: auto auto 20px;
       /* grid-template-columns define las columnas de la grilla, y el ancho de cada columna */
       /* auto ajusta el ancho de la columna al espacio libre de la grilla y al contenido de los elementos */
     }
@@ -52,27 +52,48 @@
       /* Se puede mezclar unidades sin ningun tipo de problemas */
       /* fr es la unidad que nos permite definir el tamaño de las columnas de forma proporcional al tamaño disponible */
       /* por ejemplo si tenemos grid-template-columns:  1fr 100px, 1fr = 100% - 100px */
-      grid-template-columns:  1fr 2fr;
+      grid-template-columns: 1fr 2fr;
       /* grid-template-rows: nos permite definir el tamaño de las filas de la grilla */
-      grid-template-rows:  100px 50px 30px 100px 50px;
+      grid-template-rows: 100px 50px 30px 100px 50px;
       /* si agregamos mas filas que contenido, se agregarán filas vacías. Se puede crear una grilla vacia. Los elemento ni su cantidad no definen el tamaño de la grilla */
       /* grid-auto-rows:  200px; nos permite definir el tamaño de las filas de la grilla, que no se hayan especificado en grid-template-rows */
     }
 
     /* Repeat, auto-fill y auto-fit */
     .grid-e3 {
-      grid-template-columns:  repeat(3, 1fr); 
+      grid-template-columns: repeat(3, 1fr);
       /*  es igual a grid-template-columns:  1fr 1fr 1fr */
       /* se puede usar de forma parcial:  grid-template-columns: 25px repeat(3, 1fr) 25px;  */
       /* se puede usar con para repetir varias columnas:  grid-template-rows: repeat(3, 25px 50px) ;  */
-      grid-template-rows:  repeat(3, 100px); 
+      grid-template-rows: repeat(3, 100px);
       /*  es igual a grid-template-rows:  100px 100px 100px */
     }
 
     /* minmax */
     .grid-e4 {
-      grid-template-columns:  minmax(100px, 1fr) 1fr 1fr; 
+      grid-template-columns: minmax(100px, 1fr) 1fr 1fr;
       /*  cuando el tamaño de la columna sea menor que 100px, el ancho sera 100px, si es mayor, se comportara como 1fr  (es similar al min-width) */
+    }
+
+    /* Auto-fill, auto-fit, gap */
+    .grid-e5 {
+      display: grid;
+      grid-template-columns: repeat(
+        auto-fill, 
+        minmax(200px, 1fr)
+        );
+        /*  auto-fill: nos permite que se vayan agregando columnas cuando el se supera el tamaño minimo del elemento. Los elementos "crecen" hasta que el contenido se supere el tamaño minimo para una nueva columna (por el minmax()) */
+        /* auto-fit: nos permite que si no hay mas elementos, el tamaño de los elementos se ajuste a la grilla */
+      gap: 16px; /* 16px de espacio entre elementos */
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .grid-e5 img {
+      border-radius: 8px;
+      width: 100%;
+      height: auto;
     }
   </style>
 </head>
@@ -128,6 +149,19 @@
         <div>5</div>
         <div>6</div>
         <div>7</div>
+      </div>
+    </section>
+    <section>
+      <h2>Ejemplo 5: Auto-fill y auto-fit </h2>
+      <div class="grid grid-e5">
+        <img src='https://m.media-amazon.com/images/I/91xCWjZ2IIL._AC_UF894,1000_QL80_.jpg'>
+        <img src='https://m.media-amazon.com/images/I/91xCWjZ2IIL._AC_UF894,1000_QL80_.jpg'>
+        <img src='https://m.media-amazon.com/images/I/91xCWjZ2IIL._AC_UF894,1000_QL80_.jpg'>
+        <img src='https://m.media-amazon.com/images/I/91xCWjZ2IIL._AC_UF894,1000_QL80_.jpg'>
+        <img src='https://m.media-amazon.com/images/I/91xCWjZ2IIL._AC_UF894,1000_QL80_.jpg'>
+        <img src='https://m.media-amazon.com/images/I/91xCWjZ2IIL._AC_UF894,1000_QL80_.jpg'>
+        <img src='https://m.media-amazon.com/images/I/91xCWjZ2IIL._AC_UF894,1000_QL80_.jpg'>
+        <img src='https://m.media-amazon.com/images/I/91xCWjZ2IIL._AC_UF894,1000_QL80_.jpg'>
       </div>
     </section>
   </main>
