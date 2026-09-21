@@ -46,6 +46,18 @@
       /* auto ajusta el ancho de la columna al espacio libre de la grilla y al contenido de los elementos */
     }
 
+    /* Columnas, fr y filas */
+    .grid-e2 {
+      /* grid-template-columns:  50% 100px auto 10vw;  */
+      /* Se puede mezclar unidades sin ningun tipo de problemas */
+      /* fr es la unidad que nos permite definir el tamaño de las columnas de forma proporcional al tamaño disponible */
+      /* por ejemplo si tenemos grid-template-columns:  1fr 100px, 1fr = 100% - 100px */
+      grid-template-columns:  1fr 2fr;
+      /* grid-template-rows: nos permite definir el tamaño de las filas de la grilla */
+      grid-template-rows:  100px 50px 30px 100px 50px;
+      /* si agregamos mas filas que contenido, se agregarán filas vacías. Se puede crear una grilla vacia. Los elemento ni su cantidad no definen el tamaño de la grilla */
+      /* grid-auto-rows:  200px; nos permite definir el tamaño de las filas de la grilla, que no se hayan especificado en grid-template-rows */
+    }
   </style>
 </head>
 
@@ -57,6 +69,18 @@
     <section>
       <h2>Ejemplo 1: Grid Básico</h2>
       <div class="grid grid-e1">
+        <div>1asdasdasd</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+      </div>
+    </section>
+    <section>
+      <h2>Ejemplo 2: Columnas, fr y filas </h2>
+      <div class="grid grid-e2">
         <div>1asdasdasd</div>
         <div>2</div>
         <div>3</div>
