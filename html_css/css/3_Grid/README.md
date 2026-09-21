@@ -19,10 +19,10 @@ Parte del monorepo `html_css/`. Continúa después de `2_Flexbox/`.
 > exactos. Un checkpoint puede abarcar varios commits o fusionarse con otro
 > si el contenido era magro.
 
-- [ ] **01** `-----------------` — setup del laboratorio
-- [ ] **02** `00:00:00–00:03:58` — introducción a Grid
-- [ ] **03** `00:03:58–00:10:02` — qué es Grid, características y Grid vs Flex
-- [ ] **04** `00:10:02–00:17:01` — Grid en código y primera grid
+- [x] **01** `-----------------` — setup del laboratorio
+- [x] **02** `00:00:00–00:03:58` — introducción a Grid
+- [x] **03** `00:03:58–00:10:02` — qué es Grid, características y Grid vs Flex
+- [x] **04** `00:10:02–00:17:01` — Grid en código y primera grid
 - [ ] **05** `00:17:01–00:24:07` — crear más columnas y la unidad `fr`
 - [ ] **06** `00:24:07–00:30:11` — `grid-template-rows`, cuadrícula vacía y filas automáticas
 - [ ] **07** `00:30:11–00:35:01` — propiedad `repeat()`
