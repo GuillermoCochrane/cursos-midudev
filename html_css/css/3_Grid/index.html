@@ -95,6 +95,70 @@
       width: 100%;
       height: auto;
     }
+
+    /* Posicionamiento explícito */
+    .grid-e6 {
+      grid-template-columns: minmax(100px, 1fr) 1fr 1fr;
+      gap: 4px;
+      grid-auto-rows: 50px;
+    }
+
+    .grid-e6 div:first-child {
+      background-color: lightgreen;
+      border: 2px solid green;
+      grid-column-start: 1; /* Grid-column-start define la columna inicial en la cual se colocará el elemento */
+      grid-column-end: 3; /* Grid-column-end define la columna final en la cual se colocará el elemento */
+      grid-row-start: 1; /* Grid-row-start define la fila inicial en la cual se colocará el elemento */
+      grid-row-end: 2; /* Grid-row-end define la fila final en la cual se colocará el elemento */
+      /* se puede usar para dejar vacío partes de la grilla */
+      /* como se define de forma explicita la posicion inicial y final del elemento, estos  puedem ir en cualquier orden dentro de la grilla */
+    }
+    .grid-e6 div:nth-child(2) {
+      background-color: goldenrod;
+      border: 2px solid yellow;
+      grid-column-start: 3; /* grid-column-start define la columna inicial en la cual se colocará el elemento */
+      grid-row-start:  1; /* grid-row-start define la fila inicial en la cual se colocará el elemento */
+      grid-row-end: 3; /* grid-row-end define la fila final en la cual se colocará el elemento */
+    }
+
+    .grid-e6 div:nth-child(3) {
+      background-color: lightseaGreen;
+      border: 2px solid blue;
+      grid-column-start: span 2; /* con span, se puede especificar el número de filas o columnas que se van a ocupar */
+      grid-row-start: span 2;
+    }
+
+    .grid-e6 div:nth-child(4) {
+      background-color: lightcoral;
+      border: 2px solid red;
+      grid-column: 2 / 4; /* grid-column define la columna inicial y final en la cual se colocará el elemento */
+      grid-row: 4 / 5; /* grid-row define la fila inicial y final en la cual se colocará el elemento */
+    }
+
+    .grid-e6 div:nth-child(5) {
+      background-color: mediumpurple;
+      border: 2px solid purple;
+      grid-column: 1 / -1; /* se pueden usar numero negativo para indicar el final de la columna (1 /-1 indica que ocupa todas las columnas) */
+      grid-row: 5 / 6;
+    }
+
+    .grid-e6 div:nth-child(6) {
+      background-color: lightgray;
+      border: 2px solid darkslategrey;
+      grid-column: 1/3;
+      grid-row: 1/2;
+      opacity: 0.7;
+      text-align: right;
+      /* los elementos de grid se pueden superponer */
+    }
+
+    /* layout responsive */
+    @media (width > 500px) {
+      .grid-e6 {
+        grid-template-columns: minmax(200px, 1fr) 1fr 1fr;
+      }
+    }
+
   </style>
 </head>
 
@@ -162,6 +226,18 @@
         <img src='https://m.media-amazon.com/images/I/91xCWjZ2IIL._AC_UF894,1000_QL80_.jpg'>
         <img src='https://m.media-amazon.com/images/I/91xCWjZ2IIL._AC_UF894,1000_QL80_.jpg'>
         <img src='https://m.media-amazon.com/images/I/91xCWjZ2IIL._AC_UF894,1000_QL80_.jpg'>
+      </div>
+    </section>
+    <section>
+      <h2>Ejemplo 6: Posicionamiento explícito </h2>
+      <div class="grid grid-e6">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
       </div>
     </section>
   </main>
