@@ -78,13 +78,12 @@
     /* Auto-fill, auto-fit, gap */
     .grid-e5 {
       display: grid;
-      grid-template-columns: repeat(
-        auto-fill, 
-        minmax(200px, 1fr)
-        );
-        /*  auto-fill: nos permite que se vayan agregando columnas cuando el se supera el tamaño minimo del elemento. Los elementos "crecen" hasta que el contenido se supere el tamaño minimo para una nueva columna (por el minmax()) */
-        /* auto-fit: nos permite que si no hay mas elementos, el tamaño de los elementos se ajuste a la grilla */
-      gap: 16px; /* 16px de espacio entre elementos */
+      grid-template-columns: repeat(auto-fill,
+          minmax(200px, 1fr));
+      /*  auto-fill: nos permite que se vayan agregando columnas cuando el se supera el tamaño minimo del elemento. Los elementos "crecen" hasta que el contenido se supere el tamaño minimo para una nueva columna (por el minmax()) */
+      /* auto-fit: nos permite que si no hay mas elementos, el tamaño de los elementos se ajuste a la grilla */
+      gap: 16px;
+      /* 16px de espacio entre elementos */
       width: 100%;
       max-width: 900px;
       margin: 0 auto;
@@ -106,39 +105,51 @@
     .grid-e6 div:first-child {
       background-color: lightgreen;
       border: 2px solid green;
-      grid-column-start: 1; /* Grid-column-start define la columna inicial en la cual se colocará el elemento */
-      grid-column-end: 3; /* Grid-column-end define la columna final en la cual se colocará el elemento */
-      grid-row-start: 1; /* Grid-row-start define la fila inicial en la cual se colocará el elemento */
-      grid-row-end: 2; /* Grid-row-end define la fila final en la cual se colocará el elemento */
+      grid-column-start: 1;
+      /* Grid-column-start define la columna inicial en la cual se colocará el elemento */
+      grid-column-end: 3;
+      /* Grid-column-end define la columna final en la cual se colocará el elemento */
+      grid-row-start: 1;
+      /* Grid-row-start define la fila inicial en la cual se colocará el elemento */
+      grid-row-end: 2;
+      /* Grid-row-end define la fila final en la cual se colocará el elemento */
       /* se puede usar para dejar vacío partes de la grilla */
       /* como se define de forma explicita la posicion inicial y final del elemento, estos  puedem ir en cualquier orden dentro de la grilla */
     }
+
     .grid-e6 div:nth-child(2) {
       background-color: goldenrod;
       border: 2px solid yellow;
-      grid-column-start: 3; /* grid-column-start define la columna inicial en la cual se colocará el elemento */
-      grid-row-start:  1; /* grid-row-start define la fila inicial en la cual se colocará el elemento */
-      grid-row-end: 3; /* grid-row-end define la fila final en la cual se colocará el elemento */
+      grid-column-start: 3;
+      /* grid-column-start define la columna inicial en la cual se colocará el elemento */
+      grid-row-start: 1;
+      /* grid-row-start define la fila inicial en la cual se colocará el elemento */
+      grid-row-end: 3;
+      /* grid-row-end define la fila final en la cual se colocará el elemento */
     }
 
     .grid-e6 div:nth-child(3) {
       background-color: lightseaGreen;
       border: 2px solid blue;
-      grid-column-start: span 2; /* con span, se puede especificar el número de filas o columnas que se van a ocupar */
+      grid-column-start: span 2;
+      /* con span, se puede especificar el número de filas o columnas que se van a ocupar */
       grid-row-start: span 2;
     }
 
     .grid-e6 div:nth-child(4) {
       background-color: lightcoral;
       border: 2px solid red;
-      grid-column: 2 / 4; /* grid-column define la columna inicial y final en la cual se colocará el elemento */
-      grid-row: 4 / 5; /* grid-row define la fila inicial y final en la cual se colocará el elemento */
+      grid-column: 2 / 4;
+      /* grid-column define la columna inicial y final en la cual se colocará el elemento */
+      grid-row: 4 / 5;
+      /* grid-row define la fila inicial y final en la cual se colocará el elemento */
     }
 
     .grid-e6 div:nth-child(5) {
       background-color: mediumpurple;
       border: 2px solid purple;
-      grid-column: 1 / -1; /* se pueden usar numero negativo para indicar el final de la columna (1 /-1 indica que ocupa todas las columnas) */
+      grid-column: 1 / -1;
+      /* se pueden usar numero negativo para indicar el final de la columna (1 /-1 indica que ocupa todas las columnas) */
       grid-row: 5 / 6;
     }
 
@@ -159,6 +170,54 @@
       }
     }
 
+    /* Grid Areas */
+    .grid-e7 {
+      display: grid;
+      width: 100%;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-rows: 35px 1fr 100px;
+      min-height: 100vh;
+      /* en lugar de definir columnas y filas, definimos las áreas de la grilla  y donde se colocarán y cuanto ocuparan los elementos dentro de de la grilla */
+      grid-template-areas:
+        "header header sidebar" 
+        "content content content"
+        "footer footer footer";
+    }
+
+    /* en mobile, la sidebar se coloca en la primera fila, y para el resto de las queries en la segunda fila */
+    @media (width > 400px) {
+      .grid-e7 {
+        grid-template-areas:
+          "header header header" 
+          "sidebar content content" 
+          "footer footer footer";
+          /* se pueden dejar "huecos" en el grid-template-areas, ubicando un "." en la posición que quiera dejar vacío */
+          /* ej: grid-template-areas: "header header  ."  va a ser un header de 2 columnas y 1 hueco de una columna */
+      }
+    }
+
+    .grid-e7 header {
+      background: #09f;
+      grid-area: header;
+      /* grid-column: 1 / -1; */
+    }
+
+    .grid-e7 aside {
+      background: yellow;
+      grid-area: sidebar;
+    }
+
+    .grid-e7 main {
+      background: red;
+      grid-area: content;
+      /* grid-column: span 2; */
+    }
+
+    .grid-e7 footer {
+      background: gray;
+      grid-area: footer;
+      /* grid-column: 1 / -1; */
+    }
   </style>
 </head>
 
@@ -238,6 +297,15 @@
         <div>5</div>
         <div>6</div>
         <div>7</div>
+      </div>
+    </section>
+    <section>
+      <h2>Ejemplo 7: Grid areas </h2>
+      <div class="grid-e7">
+        <header>header</header>
+        <aside>aside</aside>
+        <main>content</main>
+        <footer>footer</footer>
       </div>
     </section>
   </main>

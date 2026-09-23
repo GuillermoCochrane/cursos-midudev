@@ -31,7 +31,7 @@ Parte del monorepo `html_css/`. Continúa después de `2_Flexbox/`.
 - [x] **10** `00:57:41–01:00:06` — margin vs gap
 - [x] **11** `01:00:06–01:10:54` — líneas de la cuadrícula y posicionamiento explícito
 - [x] **12** `01:10:54–01:20:23` — bloques encima de otros y crear un layout
-- [ ] **13** `01:20:23–01:26:52` — grid areas
+- [x] **13** `01:20:23–01:26:52` — grid areas
 - [ ] **14** `01:26:52–01:32:29` — alineación en línea y en bloque
 - [ ] **15** `01:32:29–01:36:11` — centrar contenido y 3 formas de centrar un div
 
